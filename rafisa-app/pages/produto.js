@@ -3,8 +3,8 @@ import Header from '../components/Header'
 import SliderProduto from '../components/Sliders/SliderProduto'
 
 export default function Produto(props) {
-
   return (
+
     <div>
       <Header style={{ backgroundColor: '#062c44', margin: 0 }}></Header>
 

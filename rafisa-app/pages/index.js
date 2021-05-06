@@ -1,5 +1,4 @@
 
-import useScript from '../hooks/useScript'
 
 import Header from '../components/Header'
 import EntryBanner from '../components/EntryBanner'
@@ -9,13 +8,12 @@ import Products from '../components/Products'
 import Form from '../components/Form'
 import Footer from '../components/Footer'
 import { useEffect } from 'react'
+import WhatsAppButton from '../components/WhatsAppButton'
 
 export default function Home(props) {
-
-  useScript('/scripts/scroll.js');
-
   return (
     <div>
+      <WhatsAppButton></WhatsAppButton>
       <section id="main-section">
         <Header></Header>
         <EntryBanner></EntryBanner>
@@ -37,6 +35,7 @@ export default function Home(props) {
       </main>
 
       <Footer></Footer>
+      <script src="/scripts/scroll.js"></script>
 
     </div>
   )
