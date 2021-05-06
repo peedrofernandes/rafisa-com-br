@@ -10,7 +10,7 @@ export default function Home() {
         <header className="header">
 
           <div className="logo">
-            <img className="small" src="./Logos/rafisa (2).svg" alt="Logo Rafisa" />
+            <img className="small" src="/assets/logos/rafisa (2).svg" alt="Logo Rafisa" />
           </div>
 
 
@@ -30,17 +30,17 @@ export default function Home() {
               <ul className="contact contact-header ">
 
                 <li>
-                  <img src="./assets/Images/phone-call.svg" className="logo-svg" alt="Logo telefone" />
+                  <img src="/assets/icons/phone-call.svg" className="logo-svg" alt="Logo telefone" />
         (47)&nbsp;3455&#8209;0780
       </li>
 
                 <li>
-                  <img src="./assets/Images/email (1).svg" className="logo-svg" alt="E-mail logo" />
+                  <img src="/assets/icons/email (1).svg" className="logo-svg" alt="E-mail logo" />
         rafisa@rafisa.com.br
       </li>
 
                 <li>
-                  <img src="./assets/Images/whatsapp.svg" className="logo-svg" alt="Logo WhatsApp" />
+                  <img src="/assets/icons/whatsapp.svg" className="logo-svg" alt="Logo WhatsApp" />
         (47)&nbsp;9&nbsp;9177&#8209;3626
       </li>
 
@@ -99,7 +99,7 @@ export default function Home() {
           <div className="right">
 
             <div className="vitra-banner">
-              <img src="./assets/Images/vitrabanner.jpg" alt="Máquina Vitra" />
+              <img src="/assets/banners/vitrabanner.jpg" alt="Máquina Vitra" />
             </div>
 
           </div>
@@ -193,7 +193,7 @@ export default function Home() {
             <div className="card">
               <p>Sacaria com ótimo custo benefício para minimizar seus gastos de produção</p>
               <div>
-                <img className="medium" src="./assets/Images/rafia.png" alt="Bobina de ráfia" />
+                <img className="medium" src="/assets/images/rafia.png" alt="Bobina de ráfia" />
                 <button className="button">SABER MAIS</button>
               </div>
             </div>
@@ -209,7 +209,7 @@ export default function Home() {
             <div className="card">
               <p>Sacaria com ótimo custo benefício para minimizar seus gastos de produção</p>
               <div>
-                <img className="medium" src="./assets/Images/rafia.png" alt="Bobina de ráfia" />
+                <img className="medium" src="/assets/images/rafia.png" alt="Bobina de ráfia" />
                 <button className="button">SABER MAIS</button>
               </div>
             </div>
@@ -225,7 +225,7 @@ export default function Home() {
             <div className="card">
               <p>Sacaria com ótimo custo benefício para minimizar seus gastos de produção</p>
               <div>
-                <img className="medium" src="./assets/Images/rafia.png" alt="Bobina de ráfia" />
+                <img className="medium" src="/assets/images/rafia.png" alt="Bobina de ráfia" />
                 <button className="button">SABER MAIS</button>
               </div>
             </div>
@@ -292,15 +292,15 @@ export default function Home() {
           <ul className="contact column">
             <h4>Contato: </h4>
             <li>
-              <img src="./assets/Images/phone-call.svg" className="logo-svg" alt="Logo telefone" />
+              <img src="/assets/icons/phone-call.svg" className="logo-svg" alt="Logo telefone" />
       (47) 3455&#8209;0780
     </li>
             <li>
-              <img src="./assets/Images/email (1).svg" className="logo-svg" alt="E-mail logo" />
+              <img src="/assets/icons/email (1).svg" className="logo-svg" alt="E-mail logo" />
       rafisa@rafisa.com.br
     </li>
             <li>
-              <img src="./assets/Images/whatsapp.svg" className="logo-svg" alt="Logo WhatsApp" />
+              <img src="/assets/icons/whatsapp.svg" className="logo-svg" alt="Logo WhatsApp" />
       (47) 9 9177&#8209;3626
     </li>
           </ul>
