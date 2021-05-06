@@ -122,7 +122,7 @@ export default function Home() {
 
               <div>
                 <div id="slider">
-                  <input type="radio" name="slider" id="slide1" checked></input>
+                  <input type="radio" name="slider" id="slide1" defaultChecked></input>
                   <input type="radio" name="slider" id="slide2"></input>
                   <input type="radio" name="slider" id="slide3"></input>
                   <input type="radio" name="slider" id="slide4"></input>
