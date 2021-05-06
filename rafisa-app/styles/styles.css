@@ -705,7 +705,7 @@ h1 {
 
 /* Slider da tela de orçamento */
 
-#slider {
+/* #slider {
   width: 80vw;
   max-width: 100%;
   text-align: center;
@@ -834,4 +834,4 @@ h1 {
 #slide2:checked ~ #bullets label:nth-child(2),
 #slide3:checked ~ #bullets label:nth-child(3) {
   background: #444;
-}
+} */
