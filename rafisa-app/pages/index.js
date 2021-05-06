@@ -1,8 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useEffect } from 'react'
+import useScript from '../components/hooks/useScript'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function Home(props) {
+
+  useScript('/scripts/scroll.js');
+  
   return (
     <div>
       <section id="main-section">
@@ -286,7 +291,7 @@ export default function Home() {
           <div className="footer-info">
             <p>CNPJ: xx-xxx-xxx/xxxx-xx</p>
             <p>Rua São Paulo 4351, Bairro Floresta, Joinville - SC</p>
-            <p>Horário de functionamento: de Segunda-feira à Sexta-feira das 8:00 às 18:00</p>
+            <p>Horário de funcionamento: de Segunda-feira à Sexta-feira das 8:00 às 18:00</p>
           </div>
 
           <ul className="contact column">
@@ -326,7 +331,6 @@ export default function Home() {
         </div>
 
       </footer>
-      <script type="text/javascript" src="animation-scroll.js"></script>
     </div>
   )
 }
