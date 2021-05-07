@@ -30,12 +30,12 @@ export default function Header(props) {
             (47)&nbsp;3455&#8209;0780
           </li>
 
-          <li>
+          <li className="mail">
             <img src="/assets/icons/email (1).svg" className="logo-svg" alt="E-mail logo" />
             rafisa@rafisa.com.br
           </li>
 
-          <li>
+          <li className="whats">
             <img src="/assets/icons/whatsapp.svg" className="logo-svg" alt="Logo WhatsApp" />
             (47)&nbsp;9&nbsp;9177&#8209;3626
           </li>

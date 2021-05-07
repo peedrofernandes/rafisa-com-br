@@ -21,7 +21,7 @@ export default function Products(props) {
 
           <div>
             <Slider_1></Slider_1>
-            <Link href="/produto"><a><button className="button">SAIBA MAIS</button></a></Link>
+            <a href="/produto"><button className="button">SAIBA MAIS</button></a>
           </div>
 
         </div>

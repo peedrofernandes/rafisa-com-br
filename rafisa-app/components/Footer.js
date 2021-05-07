@@ -16,11 +16,11 @@ export default function Footer(props) {
             <img src="/assets/icons/phone-call.svg" className="logo-svg" alt="Logo telefone" />
       (47) 3455&#8209;0780
     </li>
-          <li>
+          <li className="mail">
             <img src="/assets/icons/email (1).svg" className="logo-svg" alt="E-mail logo" />
       rafisa@rafisa.com.br
     </li>
-          <li>
+          <li className="whats">
             <img src="/assets/icons/whatsapp.svg" className="logo-svg" alt="Logo WhatsApp" />
       (47) 9 9177&#8209;3626
     </li>
