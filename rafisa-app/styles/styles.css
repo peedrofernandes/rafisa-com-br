@@ -843,14 +843,11 @@ h1 {
   display: flex;
 }
 
-.wpp {
+.wpp-container {
   position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  bottom: 20px;
-  right: 20px;
+  display: inline-block;
+  bottom: 10px;
+  right: 10px;
   z-index: 20;
   background-color: rgba(250, 250, 250, .6);
   padding: 14px;
@@ -860,6 +857,49 @@ h1 {
   animation-duration: 6s;
   animation-delay: 2s;
   animation-iteration-count: infinite;
+}
+
+input[id=close] {
+  display: none;
+}
+
+.wpp-container img.cancel {
+  width: 15px;
+  float: right;
+  margin-top: -5px;
+  margin-right: -5px;
+  cursor: pointer;
+}
+input[id=close]:checked ~ .wpp-container {
+  animation-name: close;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+.wpp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.wpp img.whatsimg {
+  width: 60px;
+  cursor: pointer;
+}
+
+@keyframes close {
+  35% {
+    margin-right: 40px;
+  }
+  100% {
+    margin-right: -500px;
+  }
+  100% {
+    display: none;
+  }
 }
 
 @keyframes bounce {
@@ -876,6 +916,34 @@ h1 {
 .wpp > img {
   width: 80px;
 }
+@media screen and (max-width: 1150px) {
+  .wpp img.whatsimg {
+    width: 70px;
+  }
+} 
+@media screen and (max-width: 1000px) {
+  .wpp img.whatsimg {
+    width: 60px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .wpp img.whatsimg {
+    width: 50px;
+  }
+  .wpp-container {
+    max-width: 35%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .wpp img.whatsimg {
+    width: 40px;
+  }
+  .wpp-container {
+    padding: 9px;
+    font-size: 0.8rem;
+  }
+}
+
 
 /* Slider da tela de orçamento */
 
