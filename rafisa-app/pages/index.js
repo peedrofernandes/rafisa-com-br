@@ -13,6 +13,7 @@ import WhatsAppButton from '../components/WhatsAppButton'
 export default function Home(props) {
   return (
     <div>
+      <input name="close" id="close" type="radio"></input>
       <WhatsAppButton></WhatsAppButton>
       <section id="main-section">
         <Header></Header>
