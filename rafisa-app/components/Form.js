@@ -30,6 +30,10 @@ export default function Form(props) {
             <label htmlFor="message">Mensagem: </label>
             <textarea placeholder="Digite aqui a sua mensagem" name="message" id="message" cols="30" rows="10"></textarea>
           </div>
+          
+          <div>
+            <p>Estaremos respondendo no seu e-mail!</p>
+          </div>
 
           <div className="form-input">
             <button className="button" type="submit">Enviar mensagem</button>
