@@ -1,4 +1,4 @@
-
+import Link from 'next/link';
 
 export default function WhatsAppButton(props) {
   return (
@@ -10,9 +10,13 @@ export default function WhatsAppButton(props) {
         </div>
 
         <div className="wpp">
-          <h4>Faça um orçamento!</h4>
-          <img className="whatsimg" src="/assets/icons/whatsapp-color.svg"></img>
-          <p>Horário de atendimento: das 08:00 às 18:00</p>
+        <h4>Faça um orçamento!</h4>
+        <Link href="https://api.whatsapp.com/send?phone=5547991973626&text=Oi,%20eu%20gostaria%20de%20saber%20mais%20sobre%20a%20Rafisa!">
+          <a target="_blank">
+            <img className="whatsimg" src="/assets/icons/whatsapp-color.svg"></img>
+          </a>
+        </Link>
+        <p>Horário de atendimento: das 08:00 às 18:00</p>
         </div>
 
       </div>
