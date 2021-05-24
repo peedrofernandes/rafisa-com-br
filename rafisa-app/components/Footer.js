@@ -5,7 +5,7 @@ export default function Footer(props) {
       <div className="footer">
 
         <div className="footer-info">
-          <p>CNPJ: xx-xxx-xxx/xxxx-xx</p>
+          <p>CNPJ: 05-908-602/0001-65</p>
           <p>Rua São Paulo 4351, Bairro Floresta, Joinville - SC</p>
           <p>Horário de funcionamento: de Segunda-feira à Sexta-feira das 8:00 às 18:00</p>
         </div>

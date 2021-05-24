@@ -255,8 +255,8 @@ main#content h3 {
 }
 
 .box {
-  background-color: var(--lightblue);
-  color: white;
+  background-color: #ffffff91;
+  color: rgb(27, 27, 27);
   padding: 10px 10px;
   box-shadow: 0px 0px 4px black;
   border-radius: 10px;
