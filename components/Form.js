@@ -1,8 +1,7 @@
 export default function Form(props) {
   return (
-    <section id="form">
-      <h2>Fale conosco!</h2>
-      <form action="">
+    <section id="form" className={props.className}>
+      <h2>{props.h2}</h2>
 
         <div className="form">
 
@@ -39,8 +38,6 @@ export default function Form(props) {
             <button className="button" type="submit">Enviar mensagem</button>
           </div>
         </div>
-
-      </form>
 
     </section>
   )
