@@ -403,8 +403,7 @@ section#products article:first-of-type {
   margin-top: 20px;
 }
 strong {
-  color: var(--lime);
-  background-color: rgb(50, 50, 50);
+  color: var(--blue);
   padding: 1px 8px;
   border-radius: 9px;
   font-size: 2.4rem;
@@ -429,11 +428,11 @@ strong {
 .button {
   background-color: var(--blue);
   border: none;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, .9);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, .6);
   /* box-shadow: 1px 1px 3px rgba(0, 0, 0, .5); */
-  padding: 12px;
-  border-radius: 50px;
-  font-size: 12pt;
+  padding: 12px 26px;
+  border-radius: 2px;
+  font-size: 16pt;
   font-weight: 600;
   color: var(--verylightblue);
   /* letter-spacing: 1px; */
@@ -442,7 +441,7 @@ strong {
   margin-top: 5px;
 }
 .button:hover {
-  margin-bottom: -7px;
+  margin-bottom: -2px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, .4);
 }
 
@@ -472,6 +471,9 @@ strong {
   .product > div:last-child > div:last-child {
     justify-content: center;
   }
+  .button {
+    margin-top: 10px;
+  }
 }
 
 /* Formulário */
@@ -494,26 +496,25 @@ section#form h2 {
 }
 .form-input {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
   margin-bottom: 20px;
-  align-items: center;
 }
 input, textarea {
   flex-grow: 9;
-  padding: 8px 6px;
-  border: none;
+  padding: 10px 12px;
+  border: 1px solid rgb(120, 120, 120);
   font-family: 'Montserrat', sans-serif;
-  border-radius: 8px;
+  border-radius: 2px;
 }
 input:focus, textarea:focus {
   outline: none;
 }
 label {
   flex-grow: 1;
+  text-align: left;
+  padding: 4px 0;
 }
 .form {
-  background-color: rgb(209, 209, 209);
   padding: 40px;
   border-radius: 8px;
   color: rgb(30, 30, 30);
@@ -522,6 +523,14 @@ label {
 }
 .form p {
   margin: 6px 0;
+}
+
+section#form.form-produto h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+section#form.form-produto .form {
+  padding: 10px 30px;
 }
 
 @media screen and (max-width: 710px) {
@@ -603,7 +612,7 @@ footer {
   text-align: center;
 }
 .slider.full {
-  width: 80vw;
+  width: 60vw;
   margin: 0 auto;
   text-align: center;
   max-width: none;
@@ -620,7 +629,7 @@ footer {
 
 .slides {
   border: 3px solid #ccc;
-  border-radius: 12px;
+  border-radius: 2px;
   background: #fff;
   position: relative;
   z-index: 1;
@@ -669,40 +678,101 @@ footer {
   transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
   width: 400%;
   /* line-height: 0; */
-  height: 200px;
+  height: 221px;
 }
 
 .inner.full {
-  height: calc(0.5625 * 80vw);
-  max-height: 500px;
+  height: calc(3/4 * 60vw);
+  max-height: 700px;
 }
 
 .slides .slide {
   width: 25%;
-  border-radius: 9px;
+  border-radius: 3px;
   float: left;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   height: 100%;
   color: #fff;
 }
 
-.slides .slide_1 {
-  background: #00171F;
+
+.convencional .slide_1 {
+  background: url("/assets/images/Convencional/1.JPG") no-repeat;
+  background-size: cover;
 }
-.slides .slide_2 {
-  background: #003459;
+.convencional .slide_2 {
+  background: url("/assets/images/Convencional/2.JPG") no-repeat;
+  background-size: cover;
 }
-.slides .slide_3 {
-  background: #007ea7;
+.convencional .slide_3 {
+  background: url("/assets/images/Convencional/3.JPG") no-repeat;
+  background-size: cover;
 }
-.slides .slide_4 {
-  background: #00a8e8;
+.convencional .slide_4 {
+  background: url("/assets/images/Convencional/4.JPG") no-repeat;
+  background-size: cover;
 }
-.slide-content {
-  padding: 10px;
+.convencional .slide_5 {
+  background: url("/assets/images/Convencional/5.JPG") no-repeat;
+  background-size: cover;
 }
+.convencional .slide_6 {
+  background: url("/assets/images/Convencional/6.JPG") no-repeat;
+  background-size: cover;
+}
+
+.laminada .slide_1 {
+  background: url("/assets/images/Laminado/1.JPG") no-repeat;
+  background-size: cover;
+}
+.laminada .slide_2 {
+  background: url("/assets/images/Laminado/2.JPG") no-repeat;
+  background-size: cover;
+}
+.laminada .slide_3 {
+  background: url("/assets/images/Laminado/3.JPG") no-repeat;
+  background-size: cover;
+}
+.laminada .slide_4 {
+  background: url("/assets/images/Laminado/4.JPG") no-repeat;
+  background-size: cover;
+}
+.laminada .slide_5 {
+  background: url("/assets/images/Laminado/5.JPG") no-repeat;
+  background-size: cover;
+}
+.laminada .slide_6 {
+  background: url("/assets/images/Laminado/6.JPG") no-repeat;
+  background-size: cover;
+}
+
+.impressa .slide_1 {
+  background: url("/assets/images/Impresso/1.JPG") no-repeat;
+  background-size: cover;
+}
+.impressa .slide_2 {
+  background: url("/assets/images/Impresso/2.JPG") no-repeat;
+  background-size: cover;
+}
+.impressa .slide_3 {
+  background: url("/assets/images/Impresso/3.JPG") no-repeat;
+  background-size: cover;
+}
+.impressa .slide_4 {
+  background: url("/assets/images/Impresso/4.JPG") no-repeat;
+  background-size: cover;
+}
+.impressa .slide_5 {
+  background: url("/assets/images/Impresso/5.JPG") no-repeat;
+  background-size: cover;
+}
+.impressa .slide_6 {
+  background: url("/assets/images/Impresso/6.JPG") no-repeat;
+  background-size: cover;
+}
+
 .controls {
   margin: -120px 0 0 0;
   width: 100%;
@@ -712,7 +782,7 @@ footer {
 }
 
 .controls.full {
-  margin: -270px 0px 230px 0;
+  margin: -320px 0px 230px 0;
 }
 @media screen and (max-width: 840px) {
   .controls.full {
@@ -849,10 +919,19 @@ h1 {
   font-size: 3rem;
 }
 
-.budget-info {
-  width: 90vw;
+#budget-info {
+  width: 80vw;
   margin: 0 auto;
   display: flex;
+  margin-top: 100px;
+}
+
+@media screen and (max-width: 1260px) {
+  #budget-info {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90vw;
+  }
 }
 
 .wpp-container {
@@ -955,137 +1034,3 @@ input[id=close]:checked ~ .wpp-container {
     font-size: 0.8rem;
   }
 }
-
-
-/* Slider da tela de orçamento */
-
-/* #slider {
-  width: 80vw;
-  max-width: 100%;
-  text-align: center;
-  transform: translateX(-50%);
-  position: relative;
-  left: 50%;
-  margin-bottom: 130px;
-}
-#slider input[type=radio] {
-  display: none;
-}
-#slider label {
-  cursor: pointer;
-  text-decoration: none;
-}
-#slides {
-  border: 3px solid #ccc;
-  border-radius: 12px;
-  background: #fff;
-  position: relative;
-  z-index: 1;
-}
-#overflow {
-  width: 100%;
-  overflow: hidden;
-}
-
-#slide1:checked ~ #slides .inner {
-  margin-left: 0;
-}
-#slide2:checked ~ #slides .inner {
-  margin-left: -100%;
-}
-#slide3:checked ~ #slides .inner {
-  margin-left: -200%;
-}
-
-#slides .inner {
-  transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
-  width: 300%;
-  height: 400px;
-}
-
-#slides .slide {
-  width: calc(100% / 3);
-  border-radius: 9px;
-  float: left;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  color: #fff;
-}
-
-#slides .slide_1 {
-  background: white;
-  color: black;
-}
-#slides .slide_2 {
-  background: grey;
-}
-#slides .slide_3 {
-  background: black;
-}
-
-.slide-content {
-  padding: 10px;
-}
-
-#controls {
-  margin: -230px 0 0 0;
-  width: 100%;
-  height: 50px;
-  z-index: 3;
-  position: relative;
-}
-
-#controls label {
-  transition: opacity 0.2s ease-out;
-  display: none;
-  width: 50px;
-  height: 50px;
-  opacity: .4;
-}
-
-#controls label:hover {
-  opacity: 1;
-}
-
-#slide1:checked ~ #controls label:nth-child(2),
-#slide2:checked ~ #controls label:nth-child(3),
-#slide3:checked ~ #controls label:nth-child(1) {
-  background: url('/assets/icons/next.svg') no-repeat;
-  float: right;
-  margin: 0 -45px 0 0;
-  display: block;
-}
-
-#slide1:checked ~ #controls label:nth-child(3),
-#slide2:checked ~ #controls label:nth-child(1),
-#slide3:checked ~ #controls label:nth-child(2) {
-  background: url("/assets/icons/back.svg") no-repeat;
-  float: left;
-  margin: 0 0 0 -45px;
-  display: block;
-}
-
-#bullets {
-  margin: 70px 0 0 0;
-  text-align: center;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-#bullets label {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  background: #ccc;
-  margin: 0 10px;
-}
-
-#slide1:checked ~ #bullets label:nth-child(1),
-#slide2:checked ~ #bullets label:nth-child(2),
-#slide3:checked ~ #bullets label:nth-child(3) {
-  background: #444;
-} */
