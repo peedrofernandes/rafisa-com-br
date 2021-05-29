@@ -6,7 +6,7 @@ export default function Header(props) {
   <header className="header" style={props.style}>
 
     <div className="logo">
-      <img className="small" src="/assets/logos/rafisa (2).svg" alt="Logo Rafisa" />
+      <a href="/"><img className="small" src="/assets/logos/rafisa (2).svg" alt="Logo Rafisa" /></a>
     </div>
 
 

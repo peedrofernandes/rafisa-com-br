@@ -12,13 +12,13 @@ export default function Produto(props) {
       <main>
 
         <article>
-          <h1>Sacaria Convencional</h1>
+          <h1>Sacaria Impressa</h1>
 
           <SliderProduto>
-            <div className="slides slides-4">
+            <div className="slides">
               <div className="overflow full">
 
-                <div className="inner inner-4 convencional full">
+                <div className="inner impressa full">
 
                   <div className="slide slide_1"></div>
                   <div className="slide slide_2"></div>

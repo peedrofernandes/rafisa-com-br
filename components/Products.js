@@ -1,6 +1,4 @@
-import Slider_1 from "./Sliders/Slider_1"
-import Slider_2 from "./Sliders/Slider_2"
-import Slider_3 from "./Sliders/Slider_3"
+import SliderMain from '../components/Sliders/SliderMain';
 
 import Link from 'next/link';
 
@@ -19,7 +17,29 @@ export default function Products(props) {
           <p>Sacaria com ótimo custo benefício para minimizar seus gastos de produção</p>
 
           <div>
-            <Slider_1></Slider_1>
+            <SliderMain className="convencional" id="1">
+
+              <div className="slides">
+
+                <div className="overflow">
+
+                  <div className="inner inner-4">
+
+                    <div className="slide slide_1"></div>
+
+                    <div className="slide slide_2"></div>
+
+                    <div className="slide slide_3"></div>
+
+                    <div className="slide slide_4"> </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </SliderMain>
             <a href="/produto/convencional"><button className="button">SAIBA MAIS</button></a>
           </div>
 
@@ -36,7 +56,29 @@ export default function Products(props) {
         <div className="card">
           <p>Sacaria com ótimo custo benefício para minimizar seus gastos de produção</p>
           <div>
-          <Slider_2></Slider_2>
+            <SliderMain className="laminada" id="2">
+              
+              <div className="slides">
+
+                <div className="overflow">
+
+                  <div className="inner inner-4">
+
+                    <div className="slide slide_1"></div>
+
+                    <div className="slide slide_2"></div>
+
+                    <div className="slide slide_3"></div>
+
+                    <div className="slide slide_4"> </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+          </SliderMain>
             <a href="/produto/laminado"><button className="button">SAIBA MAIS</button></a>
           </div>
         </div>
@@ -52,7 +94,29 @@ export default function Products(props) {
         <div className="card">
           <p>Sacaria com ótimo custo benefício para minimizar seus gastos de produção</p>
           <div>
-            <Slider_3></Slider_3>
+            <SliderMain className="impressa" id="3">
+
+              <div className="slides">
+
+                <div className="overflow">
+
+                  <div className="inner inner-4">
+
+                    <div className="slide slide_1"></div>
+
+                    <div className="slide slide_2"></div>
+
+                    <div className="slide slide_3"></div>
+
+                    <div className="slide slide_4"> </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </SliderMain>
             <a href="/produto/impresso"><button className="button">SAIBA MAIS</button></a>
           </div>
         </div>
