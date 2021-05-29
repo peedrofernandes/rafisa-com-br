@@ -15,10 +15,10 @@ export default function Produto(props) {
           <h1>Sacaria Laminada</h1>
 
           <SliderProduto>
-            <div className="slides slides-4">
+            <div className="slides">
               <div className="overflow full">
 
-                <div className="inner inner-4 convencional full">
+                <div className="inner laminada full">
 
                   <div className="slide slide_1"></div>
                   <div className="slide slide_2"></div>

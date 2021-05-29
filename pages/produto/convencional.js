@@ -15,16 +15,15 @@ export default function Produto(props) {
           <h1>Sacaria Convencional</h1>
 
           <SliderProduto>
-            <div className="slides slides-5">
+            <div className="slides">
               <div className="overflow full">
 
-                <div className="inner inner-5 convencional full">
+                <div className="inner convencional full">
 
                   <div className="slide slide_1"></div>
                   <div className="slide slide_2"></div>
                   <div className="slide slide_3"></div>
                   <div className="slide slide_4"></div>
-                  <div className="slide slide_5"></div>
 
                 </div>
 
