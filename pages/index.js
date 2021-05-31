@@ -1,16 +1,28 @@
-
-
-import Header from '../components/Header'
-import EntryBanner from '../components/EntryBanner'
-import BoxOverlap from '../components/BoxOverlap'
-import Info from '../components/Info'
-import Products from '../components/Products'
-import Form from '../components/Form'
-import Footer from '../components/Footer'
-import { useEffect } from 'react'
-import WhatsAppButton from '../components/WhatsAppButton'
+import Header from '../components/Header';
+import EntryBanner from '../components/EntryBanner';
+import BoxOverlap from '../components/BoxOverlap';
+import Info from '../components/Info';
+import Products from '../components/Products';
+import Form from '../components/Form';
+import Footer from '../components/Footer';
+import { useContext } from 'react';
+import WhatsAppButton from '../components/WhatsAppButton';
+import { DataContext } from '../store/GlobalState';
 
 export default function Home(props) {
+
+  // const { state, dispatch } = useContext(DataContext);
+  // const { userInfo } = state;
+
+  const { state, dispatch } = useContext(DataContext);
+  const { userInfo } = state;
+
+  // const formSubmitHandler = async (event) => {
+  //   event.preventDefault();
+  // }
+
+  
+
   return (
     <div>
       <input name="close" id="close" type="radio"></input>
@@ -30,8 +42,8 @@ export default function Home(props) {
         <Products></Products>
 
         <hr />
-
-        <Form></Form>
+        
+          <Form assunto='Genérico'></Form>
 
       </main>
 
