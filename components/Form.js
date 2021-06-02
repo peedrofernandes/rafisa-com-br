@@ -7,26 +7,28 @@ import { postData } from "../utils/fetchData";
 export default function Form(props) {
 
   const initialState = { type: '', header: '', msg: '' };
+
   const initialUser = { nome: '', email: '', telefone: '', empresa: '', mensagem: '' }
 
   const { state, dispatch } = useContext(DataContext);
+
   const [userInfo, setUserInfo] = useState(initialUser);
+
+  const { nome, email, telefone, empresa, mensagem } = userInfo;
 
   const inputChangeHandler = (e) => {
     const { name, value } = e.target;
     setUserInfo({ ...userInfo, [name]: value });
-
     dispatch({
       type: NOTIFY,
       payload: initialState
     });
-
   }
 
-  const formSubmitHandler = async (event) => {  
-    event.preventDefault();
+  const formSubmitHandler = async (e) => {  
+    e.preventDefault();
 
-    const errorMsg = valid(userInfo);
+    const errorMsg = valid(nome, email, telefone, empresa, mensagem);
     if (errorMsg) return dispatch({ type: NOTIFY, payload: errorMsg });
 
     const data = { ...userInfo, assunto: props.assunto }
@@ -66,7 +68,7 @@ export default function Form(props) {
 
           <div className="form-input">
             <label htmlFor="message">Mensagem: </label>
-            <textarea onChange={inputChangeHandler} placeholder="Digite aqui a sua mensagem" name="message" id="message" cols="30" rows="10"></textarea>
+            <textarea onChange={inputChangeHandler} placeholder="Digite aqui a sua mensagem" name="mensagem" id="message" cols="30" rows="10"></textarea>
           </div>
 
           <div>
@@ -74,7 +76,9 @@ export default function Form(props) {
           </div>
 
           <div className="form-input">
-            <button className="button" type="submit">Enviar mensagem</button>
+            <input type="submit" className="button" value="Enviar mensagem">
+              {/* <button className="button">Enviar mensagem</button> */}
+            </input>
           </div>
         </div>
 
