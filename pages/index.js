@@ -7,6 +7,7 @@ import Form from '../components/Form';
 import Footer from '../components/Footer';
 import { useContext } from 'react';
 import WhatsAppButton from '../components/WhatsAppButton';
+import Notify from '../components/Notify';
 import { DataContext } from '../store/GlobalState';
 
 export default function Home(props) {
@@ -25,8 +26,13 @@ export default function Home(props) {
 
   return (
     <div>
+
       <input name="close" id="close" type="radio"></input>
       <WhatsAppButton></WhatsAppButton>
+
+      <input name="close2" id="close2" type="radio"></input> 
+      <Notify></Notify>
+
       <section id="main-section">
         <Header></Header>
         <EntryBanner></EntryBanner>

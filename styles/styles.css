@@ -996,7 +996,7 @@ input[id=close], input[id=closeCard] {
 }
 input[id=close]:checked ~ .wpp-container,
 input[id=closeCard]:checked ~ .card-top {
-  animation-name: close;
+  animation-name: close-wpp;
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-delay: 0s;
@@ -1015,7 +1015,7 @@ input[id=closeCard]:checked ~ .card-top {
   cursor: pointer;
 }
 
-@keyframes close {
+@keyframes close-wpp {
   35% {
     margin-right: 40px;
   }
@@ -1071,42 +1071,88 @@ input[id=closeCard]:checked ~ .card-top {
 
 /* Notify */
 
-.card-top.d-none {
-  top: -100px;
-}
-
-.card-top h6 {
-  font-size: 17pt;
-}
-
 .card-top {
+  max-width: 350px;
   position: fixed;
-  color: white;
   display: inline-block;
+  padding: 12px;
   border-radius: 4px;
-  top: 80px;
-  right: 5px;
-  max-width: 300px;
+  top: -300px;
+  right: 10px;
+  animation-name: appear;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
   z-index: 30;
-  padding: 6px 10px 10px 10px;
-  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.74);
-  transition: .5s ease-in-out;
+}
+
+input[name=close2] {
+  display: none;
+}
+input[name=close2]:checked ~ .card-top {
+  animation-name: close-card;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes close-card {
+  0% {
+    top: 10px;
+  }
+  35% {
+    top: 50px;
+  }
+  100% {
+    top: -300px;
+  }
+  100% {
+    display: none;
+  }
+}
+
+@keyframes appear {
+  0% {
+    display: inline-block;
+    right: 0;
+  }
+  35% {
+    top: 50px;
+  }
+  80% {
+    top: 5px;
+  }
+  100% {
+    top: 10px;
+  }
 }
 
 .card-top-success {
-  background-color: rgb(27, 158, 27);
+  background-color: rgb(14, 180, 14);
+  color: white;
 }
 .card-top-error {
-  background-color: rgb(206, 27, 27);
+  background-color: red;
+  color: white;
+}
+.card-top-dnone {
+  display: none;
 }
 
-.card-top div:first-child div:first-child {
-  text-align: right;
-  float: right;
-}
-.card-top img.close {
-  width: 10px;
+label[for=close2] {
+  display: inline-block;
   cursor: pointer;
+}
+#close-btn {
+  width: 12px;
+  height: 12px;
+}
+.close {
+  position: absolute;
+  right: 12px;
+  top: 8px;
 }
 
 

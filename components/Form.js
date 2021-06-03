@@ -18,14 +18,14 @@ export default function Form(props) {
 
   const inputChangeHandler = (e) => {
     const { name, value } = e.target;
-    setUserInfo({ ...userInfo, [name]: value });
+    setUserInfo({ ...userInfo, [name]:value });
     dispatch({
       type: NOTIFY,
       payload: initialState
     });
   }
 
-  const formSubmitHandler = async (e) => {  
+  const formSubmitHandler = async (e) => {
     e.preventDefault();
 
     const errorMsg = valid(nome, email, telefone, empresa, mensagem);
@@ -48,27 +48,27 @@ export default function Form(props) {
 
           <div className="form-input">
             <label htmlFor="nome">Nome: </label>
-            <input onChange={inputChangeHandler} type="text" id="nome" name="nome" placeholder="Seu primeiro nome"></input>
+            <input onChange={inputChangeHandler} type="text" id="nome" name="nome" value={nome} placeholder="Seu primeiro nome"></input>
           </div>
 
           <div className="form-input">
             <label htmlFor="email">E-mail: </label>
-            <input onChange={inputChangeHandler} type="email" id="email" name="email" placeholder="E-mail"></input>
+            <input onChange={inputChangeHandler} type="email" id="email" name="email" value={email} placeholder="E-mail"></input>
           </div>
 
           <div className="form-input">
             <label htmlFor="telefone">Telefone: </label>
-            <input onChange={inputChangeHandler} type="tel" id="telefone" name="telefone" placeholder="Seu telefone"></input>
+            <input onChange={inputChangeHandler} type="tel" id="telefone" name="telefone" value={telefone} placeholder="Seu telefone"></input>
           </div>
 
           <div className="form-input">
             <label htmlFor="empresa">Empresa: </label>
-            <input onChange={inputChangeHandler} type="text" id="empresa" name="empresa" placeholder="Nome da sua empresa (opcional)"></input>
+            <input onChange={inputChangeHandler} type="text" id="empresa" name="empresa" value={empresa} placeholder="Nome da sua empresa (opcional)"></input>
           </div>
 
           <div className="form-input">
             <label htmlFor="message">Mensagem: </label>
-            <textarea onChange={inputChangeHandler} placeholder="Digite aqui a sua mensagem" name="mensagem" id="message" cols="30" rows="10"></textarea>
+            <textarea onChange={inputChangeHandler} placeholder="Digite aqui a sua mensagem" name="mensagem" value={mensagem} id="message" cols="30" rows="10"></textarea>
           </div>
 
           <div>
