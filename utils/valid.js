@@ -7,10 +7,11 @@ export default function valid(nome, email, telefone, empresa, mensagem) {
   
   if (!nome || !email || !telefone || !mensagem) {
 
-    const type = 'error';
-    const header = 'Erro no preenchimento dos dados';
-    const msg = 'Por favor, preencha todos os campos!';
-    const payload = { type, header, msg }
+    const payload = {
+      type: 'error',
+      header: 'Erro no preenchimento dos dados',
+      msg: 'Por favor, preencha todos os campos!'
+    }
 
     return payload;
   }
