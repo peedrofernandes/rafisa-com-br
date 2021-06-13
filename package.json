@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "yarn install && next build && next start",
+    "start": "npm install && next build && next start",
     "dev": "next dev",
     "build": "next build"
   },
