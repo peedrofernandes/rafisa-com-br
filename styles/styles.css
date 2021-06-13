@@ -28,6 +28,10 @@ html, body {
 hr {
   border-style:outset
 }
+p {
+  text-indent: 20px;
+  font-size: 18px;
+}
 .column {
   flex-direction: column;
 }
@@ -76,10 +80,11 @@ img.medium {
   position: relative;
 }
 header {
-  transition: 0.5s;
+  transition: 0.3s;
 }
 header.sticky {
-  background: var(--darkblue);
+  background: var(--black);
+  text-shadow: none;
   opacity: 0.8;
   position: fixed;
   width: 100%;
@@ -98,7 +103,7 @@ li.mail, li.whats {
   transition: 0.3s;
 }
 li.mail:hover, li.whats:hover {
-  color: var(--lightblue);
+  color: var(--blue);
 }
 
 .header {
@@ -108,7 +113,7 @@ li.mail:hover, li.whats:hover {
   justify-content: space-between;
   margin-right: 20px;
   font-weight: 400;
-  transition: 0.5s;
+  transition: 0.3s;
   text-shadow: 1px 1px 3px black;
 }
 
@@ -150,21 +155,21 @@ li.mail:hover, li.whats:hover {
   padding: 6px 12px;
   border-radius: 30px;
   margin-left: 4px;
-  transition: 0.5s;
+  transition: 0.3s;
   font-weight: 600;
 }
 .header li a {
   text-decoration: none;
-  transition: .3s;
+  transition: 0.3s;
 }
 .header li a:visited {
   color: inherit;
 }
 .header li.selected {
-  color: var(--lightblue);
+  color: var(--blue);
 }
 .header li a:hover {
-  color: var(--lightblue)
+  color: var(--blue)
 }
 .contact-header {
   flex-wrap: wrap;
@@ -182,7 +187,6 @@ li.mail:hover, li.whats:hover {
   left: 6%;
   color: rgb(245, 245, 245);
   font-weight: 300;
-  text-shadow: 1px 1px 4px black;
   margin-bottom: 5px;
 }
 
@@ -194,17 +198,24 @@ li.mail:hover, li.whats:hover {
 
 }
 .buttons {
-  text-align: center;
+  text-align: left;
   margin-top: 10px;
 }
 .buttons li:first-child {
-  background-color: var(--lightblue);
+  background-color: white;
+  color: var(--darkgrey);
+  font-weight: bold;
   border: none;
 }
 .entry h1 {
-  font-size: 3.5rem;
+  font-size: 2rem;
+  background-color: rgb(22, 22, 22);
+  padding: 4px;
+  border-radius: 4px;
+  border: .5px solid white;
   font-weight: 300;
-  margin: 10px 0 10px 0;
+  margin: 15px 0 10px 0;
+  text-shadow: 1px 1px 4px black;
 }
 .entry ul {
   display: inline-block;
@@ -251,7 +262,7 @@ main#content p {
 main#content h3 {
   font-size: 1.7rem;
   color: rgb(59, 59, 59);
-  color: var(--blue);
+  color: var(--darkgrey);
 }
 
 .box {
@@ -335,6 +346,16 @@ main#content h3 {
   margin: 20px 0;
 }
 
+.h2-1::after, .h2-2::after, .h2-3::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: rgb(67, 41, 218);
+  display: block;
+  border-radius: 8px;
+  margin: 10px 0 10px 10px;
+}
+
 @media screen and (max-width: 840px) {
   .info {
     flex-direction: column;
@@ -402,8 +423,17 @@ section#products article:first-of-type {
   justify-content: space-between;
   margin-top: 20px;
 }
+
+.button-container {
+  flex-grow: 1;
+}
+.button-container > button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
 strong {
-  color: var(--blue);
+  color: var(--darkgrey);
   padding: 1px 8px;
   border-radius: 9px;
   font-size: 2.4rem;
@@ -413,6 +443,10 @@ strong {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.strong-color {
+  color:rgb(67, 41, 218);
+  font-size: 18px;
 }
 .product > div:last-child {
   display: flex;
@@ -426,7 +460,7 @@ strong {
   border-radius: 8px;
 }
 .button {
-  background-color: var(--blue);
+  background-color: var(--darkgrey);
   border: none;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, .6);
   /* box-shadow: 1px 1px 3px rgba(0, 0, 0, .5); */
@@ -434,7 +468,7 @@ strong {
   border-radius: 2px;
   font-size: 16pt;
   font-weight: 600;
-  color: var(--verylightblue);
+  color: white;
   /* letter-spacing: 1px; */
   cursor: pointer;
   transition: .2s;
@@ -489,7 +523,7 @@ section#form, form {
 
 section#form h2 {
   text-align: center;
-  color: var(--lightblue);
+  color: var(--darkgrey);
   font-size: 3.2rem;
   margin-bottom: 120px;
   margin-top: 120px;
@@ -543,7 +577,7 @@ section#form.form-produto .form {
 /* footer */
 
 footer {
-  background-color: var(--black);
+  background-color: rgb(10, 10, 10);
   color: rgb(190, 190, 190);
 }
 
@@ -1137,6 +1171,15 @@ input[name=close2]:checked ~ .card-top {
   background-color: red;
   color: white;
 }
+.card-top-blue {
+  background-color: blue;
+  color: white;
+}
+.card-top-loading {
+  background-color: rgb(10, 10, 10);
+  color: white;
+  width: 155px;
+}
 .card-top-dnone {
   display: none;
 }
@@ -1155,4 +1198,12 @@ label[for=close2] {
   top: 8px;
 }
 
+/* iFrame maps */
 
+.maps {
+  max-width: 95vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border: .5px solid rgb(121, 121, 121);
+}

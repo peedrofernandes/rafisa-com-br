@@ -1,14 +1,14 @@
 import { DataContext } from "../store/GlobalState";
 import { useContext, useState } from 'react';
-import { NOTIFY } from '../store/Actions';
 import valid from "../utils/valid";
 import { postData } from "../utils/fetchData";
+import Cleave from 'cleave.js/react';
+import CleavePhone from 'cleave.js/dist/addons/cleave-phone.br';
+import ReactGA from 'react-ga';
 
 export default function Form(props) {
 
-  const initialState = { type: '', header: '', msg: '' };
-
-  const initialUser = { nome: '', email: '', telefone: '', empresa: '', mensagem: '' }
+  const initialUser = { nome: '', email: '', telefone: '', empresa: '', mensagem: '' };
 
   const { state, dispatch } = useContext(DataContext);
 
@@ -20,23 +20,30 @@ export default function Form(props) {
     const { name, value } = e.target;
     setUserInfo({ ...userInfo, [name]:value });
     dispatch({
-      type: NOTIFY,
-      payload: initialState
+      type: 'NOTIFY',
+      payload: {}
     });
   }
 
   const formSubmitHandler = async (e) => {
     e.preventDefault();
-
+    
     const errorMsg = valid(nome, email, telefone, empresa, mensagem);
-    if (errorMsg) return dispatch({ type: NOTIFY, payload: errorMsg });
+    if (errorMsg) return dispatch({ type: 'NOTIFY', payload: { error: true, header: errorMsg.header, msg: errorMsg.msg } });
+
+    dispatch({ type: 'NOTIFY', payload: { loading: true } });
 
     const data = { ...userInfo, assunto: props.assunto }
     
     const res = await postData('sendMail', data);
-    if (res.error) return dispatch({ type: NOTIFY, payload: { type: 'error', header: res.header, msg: res.msg } });
+    if (res.error) return dispatch({ type: 'NOTIFY', payload: { error: true, loading: false, header: res.header, msg: res.msg } });
     
-    return dispatch({ type: NOTIFY, payload: { type: 'success', header: res.header, msg: res.msg } });
+    ReactGA.event({
+      category: 'Formulário',
+      action: `Contato - ${props.formSource}`,
+    })
+    return dispatch({ type: 'NOTIFY', payload: { success: true, loading: false, header: res.header, msg: res.msg } });
+
   }
 
   return (
@@ -53,12 +60,13 @@ export default function Form(props) {
 
           <div className="form-input">
             <label htmlFor="email">E-mail: </label>
-            <input onChange={inputChangeHandler} type="email" id="email" name="email" value={email} placeholder="E-mail"></input>
+            <input onChange={inputChangeHandler} type="text" id="email" name="email" value={email} placeholder="E-mail"></input>
           </div>
 
           <div className="form-input">
             <label htmlFor="telefone">Telefone: </label>
-            <input onChange={inputChangeHandler} type="tel" id="telefone" name="telefone" value={telefone} placeholder="Seu telefone"></input>
+            {/* <input onChange={inputChangeHandler} type="tel" id="telefone" name="telefone" value={telefone} placeholder="Seu telefone"></input> */}
+            <Cleave onChange={inputChangeHandler} id="telefone" name="telefone" value={telefone} placeholder="Seu telefone" options={{phone: true, phoneRegionCode: 'BR'}}></Cleave>
           </div>
 
           <div className="form-input">
@@ -76,9 +84,9 @@ export default function Form(props) {
           </div>
 
           <div className="form-input">
-            <input type="submit" className="button" value="Enviar mensagem">
-              {/* <button className="button">Enviar mensagem</button> */}
-            </input>
+            <button type="submit" className="button">
+              Enviar mensagem
+            </button>
           </div>
         </div>
 

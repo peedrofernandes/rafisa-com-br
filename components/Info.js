@@ -4,19 +4,19 @@ export default function Info(props) {
 
           <div className="left">
 
-            <article>
-              <h3>Lorem Ipsum</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam asperiores ad quam suscipit! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque quo ea nulla voluptate eaque illo facere, officia repudiandae dolorem veniam reiciendis sequi nobis at odio earum, natus quas sit recusandae.</p>
+        <article>
+          <h2 className="h2-1">História</h2>
+              <p>Há mais de 20 anos no mercado, a Rafisa surgiu como uma tentativa de promover a comodidade à pequenas, médias e grandes empresas, por meio de embalagens de qualidade impecável e que não deixavam de lado o custo-benefício. O tempo de atuação no mercado e o sucesso da Rafisa mostraram que a tentativa anteriormente descrita se transformou em conquista.</p>
             </article>
 
-            <article>
-              <h3>Lorem Ipsum</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam asperiores ad quam suscipit! Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <article>
+              <h2 className="h2-2">Propósito</h2>
+              <p>A nossa principal missão não é só vender ráfia. Enraizados na nossa empresa, a atenção individualizada e o comprometimento com você, cliente, bem como a nossa preocupação com a qualidade de cada unidade dos produtos, nos distingue e nos tornam referência no ramo de embalagens comerciais no sul do Brasil.</p>
             </article>
 
-            <article>
-              <h3>Lorem Ipsum</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam asperiores ad quam suscipit!</p>
+        <article>
+              <h2 className="h2-3">Produtos</h2>
+              <p>Logo abaixo você encontrará descrições detalhadas dos nossos produtos. Aproveite!</p>
             </article>
 
           </div>

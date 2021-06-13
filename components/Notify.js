@@ -19,11 +19,21 @@ export default function Notify() {
       </div>
 
       <div className="card-top-content">
+
         <div>
-          <h3>{header}</h3>
+
+          <h3>
+            {header}
+          </h3>
+
         </div>
+
         <div>
-          <p>{msg}</p>
+
+          <p>
+            {msg}
+          </p>
+
         </div>
       </div>
     </Toast>
