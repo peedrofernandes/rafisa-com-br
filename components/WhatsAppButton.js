@@ -1,6 +1,12 @@
 import Link from 'next/link';
+import ReactGA from 'react-ga';
 
 export default function WhatsAppButton(props) {
+
+  const eventHandler = (category, action) => {
+    ReactGA.event({ category, action });
+  }
+
   return (
       <div className="wpp-container">
         <div>
@@ -10,9 +16,9 @@ export default function WhatsAppButton(props) {
         </div>
 
         <div className="wpp">
-        <h4>Faça um orçamento!</h4>
+        <h4>Fale conosco!</h4>
         <Link href="https://api.whatsapp.com/send?phone=5547991973626&text=Oi,%20eu%20gostaria%20de%20saber%20mais%20sobre%20a%20Rafisa!">
-          <a target="_blank">
+          <a target="_blank" onClick={() => {eventHandler("Botão", "Botão do whatsapp (card)")}}>
             <img className="whatsimg" src="/assets/icons/whatsapp-color.svg"></img>
           </a>
         </Link>

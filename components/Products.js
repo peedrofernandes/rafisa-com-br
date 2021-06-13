@@ -40,7 +40,7 @@ export default function Products(props) {
               </div>
 
             </SliderMain>
-            <a href="/produto/convencional"><button className="button">SAIBA MAIS</button></a>
+            <a href="/produto/convencional" className="button-container"><button className="button">SAIBA MAIS</button></a>
           </div>
 
         </div>
@@ -54,7 +54,7 @@ export default function Products(props) {
         </div>
 
         <div className="card">
-          <p>Sacaria com ótimo custo benefício para minimizar seus gastos de produção</p>
+          <p>Sacaria com revestimento extra para maior segurança dos seus produtos</p>
           <div>
             <SliderMain className="laminada" id="2">
               
@@ -79,7 +79,7 @@ export default function Products(props) {
               </div>
 
           </SliderMain>
-            <a href="/produto/laminado"><button className="button">SAIBA MAIS</button></a>
+            <a href="/produto/laminado" className="button-container"><button className="button">SAIBA MAIS</button></a>
           </div>
         </div>
 
@@ -117,7 +117,7 @@ export default function Products(props) {
               </div>
 
             </SliderMain>
-            <a href="/produto/impresso"><button className="button">SAIBA MAIS</button></a>
+            <a href="/produto/impresso" className="button-container"><button className="button">SAIBA MAIS</button></a>
           </div>
         </div>
 
