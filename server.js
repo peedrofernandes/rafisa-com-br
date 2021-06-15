@@ -39,7 +39,7 @@ app.prepare().then(() => {
 
   server.use('*', (req, res) => {
       if (req.headers['x-forwarded-proto'] == 'https') {
-        next();
+        return handle(req, res);
       } else {
         res.redirect(`https://${req.headers.host}${req.originalUrl}`);
       }
