@@ -37,14 +37,22 @@ const handle = app.getRequestHandler();
 app.prepare().then(() => {
   const server = express();
 
-  server.use('*', (req, res) => {
-      if (req.headers['x-forwarded-proto'] == 'https') {
-        return handle(req, res);
-      } else {
-        res.redirect(`https://${req.headers.host}${req.originalUrl}`);
-      }
+  // server.all('*', (req, res) => {
+  //     if (req.headers['x-forwarded-proto'] == 'https') {
+  //       return handle(req, res);
+  //     } else {
+  //       res.redirect(`https://${req.headers.host}${req.originalUrl}`);
+  //     }
+  //   return handle(req, res);
+  // });
+
+  server.get("*", (req, res) => {
     return handle(req, res);
   });
+
+  // server.get("/", (req, res) => {
+  //   return app.render(req, res, "/", req.query);
+  // })
 
   server.listen(port, (err) => {
     if (err) {
