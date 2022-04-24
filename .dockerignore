@@ -1,0 +1,11 @@
+LICENSE
+README.md
+.git
+.history
+node_modules
+.vscode
+.env
+.env.local
+.env.development.local
+.env.production.local
+.env.test.local
