@@ -29,7 +29,7 @@ export default function Footer(props) {
     </li>
           <li className="whats">
             <img src="/assets/icons/whatsapp.svg" className="logo-svg" alt="Logo WhatsApp" />
-            <a onClick={() => {eventHandler("Botão", "Botão de Whatsapp (rodapé)")}} href="https://api.whatsapp.com/send?phone=5547991973626&text=Oi,%20eu%20gostaria%20de%20saber%20mais%20sobre%20a%20Rafisa!">(47) 9 9177&#8209;3626</a>
+            <a onClick={() => {eventHandler("Botão", "Botão de Whatsapp (rodapé)")}} href="https://api.whatsapp.com/send?phone=5547991908897&text=Oi,%20eu%20gostaria%20de%20saber%20mais%20sobre%20a%20Rafisa!">(47) 9 9190&#8209;8897</a>
     </li>
         </ul>
 
