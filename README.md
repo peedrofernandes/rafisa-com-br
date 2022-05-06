@@ -1,37 +1,127 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Repositório público - Site da Rafisa
 
-## Getting Started
+Seja bem-vindo! Esta aplicação é um site institucional e funcional desenvolvido e criado por [Pedro Fernandes](https://github.com/peedrofernandes) para a empresa [Rafisa](https://rafisa.com.br).
 
-First, run the development server:
+##### Status atual: Em desenvolvimento
 
-```bash
-npm run dev
-# or
-yarn dev
+## Componentes da aplicação:
+
+* **Página inicial**, com:
+  * Barra de navegação;
+  * Banner de entrada;
+  * Apresentação da empresa;
+  * Apresentação dos produtos;
+  * Formulário de contato;
+  * Informação de localização;
+  * Rodapé da página;
+* **Páginas de produtos**:
+  * Página sobre sacaria convencional;
+  * Página sobre sacaria laminada;
+  * Página sobre sacaria impressa (convencional e laminada);
+
+## Funcionalidades e recursos da aplicação:
+
+* Captura de contato via whatsapp e e-mail;
+* Informações sobre a empresa;
+* Informações sobre os produtos;
+
+<!-- ### Elementos do markdown (mostrados por uma lista ordenada!)
+
+1.  Título
+
+# Olá!
+
+2.  Links
+
+[Link para o YouTube](https://youtube.com)
+
+3. Pedaço de código (inline)
+
+`const factorial = (n) => n > 0 ? factorial(n - 1) : 0`
+
+4. Pedaço de código (bloco)
+
+```C
+#include <stdio.h>
+
+int main(void) {
+  printf("Ola, mundo!\n");
+
+  return 0
+}
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. Tabela (HTML)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<table>
+  <thead>
+    <tr>
+      <th>Cabeçalho 1</th>
+      <th>Cabeçalho 2</th>
+      <th>Cabeçalho 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Item 1</td>
+      <td>Item 2</td>
+      <td>Item 3</td>
+    </tr>
+    <tr>
+      <td>Item 1</td>
+      <td>Item 2</td>
+      <td>Item 3</td>
+    </tr>
+    <tr>
+      <td>Item 1</td>
+      <td>Item 2</td>
+      <td>Item 3</td>
+    </tr>
+  </tbody>
+</table>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+6. Tabela (Markdown)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+| c1 | c2 | c3 |
+| - | - | - |
+| item 1 | item 2 | item 3 |
+| item 5 | item 6 | item 7 |
 
-## Learn More
+7. Marcação de sintaxe personalizada
 
-To learn more about Next.js, take a look at the following resources:
+7.1. Python
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```Python
+print('Ola mundo!')
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+7.2. C
 
-## Deploy on Vercel
+```C
+#include <stdio.h>
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+7.3. JSON
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```json
+{
+  "valor1": "chave1",
+  "valor2": "chave2"
+}
+```
 
-# Rafisa
-Repositório do meu primeiro projeto onde eu vou aprender muito sobretudo sobre funcionalidades de tecnologias como o Next.js
+7.4. JavaScript
+
+```javascript
+const n1 = "Nome da variavel"
+
+function printar(str) {
+  console.log(str)
+}
+
+printar(n1)
+```
+
+8. Elemento em negrito
+
+**elemento em negrito** -->

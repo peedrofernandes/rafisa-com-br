@@ -19,6 +19,7 @@
     "react-ga": "^3.3.0"
   },
   "devDependencies": {
-    "dotenv": "^16.0.0"
+    "dotenv": "^16.0.0",
+    "jest": "^28.0.3"
   }
 }

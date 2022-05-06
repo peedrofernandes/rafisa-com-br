@@ -45,6 +45,7 @@ export default function Footer(props) {
           </div>
         </div>
       </div>
+      
 
       <div className="flaticon">
         Ícones feitos por <a href="https://www.flaticon.com">https://www.flaticon.com</a>
