@@ -569,7 +569,7 @@ section#form.form-produto .form {
 
 @media screen and (max-width: 710px) {
   section#form, form {
-    width: calc(100% - 20px);
+    width: 100%;
     min-width: 0;
   }
 }
