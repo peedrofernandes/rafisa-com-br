@@ -2,6 +2,8 @@
 
 Seja bem-vindo! Esta aplicação é um site institucional e funcional desenvolvido e criado por [Pedro Fernandes](https://github.com/peedrofernandes) para a empresa [Rafisa](https://rafisa.com.br).
 
+Atualmente, o site está sendo hospedado na KingHost.
+
 ##### Status atual: Em desenvolvimento
 
 ## Componentes da aplicação:
