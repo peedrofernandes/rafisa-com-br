@@ -44,7 +44,7 @@ export default function Home(props) {
 
       <section id="main-section">
         <Header></Header>
-        <EntryBanner></EntryBanner>
+        {/* <EntryBanner></EntryBanner> */}
       </section>
 
       <main id="content">
