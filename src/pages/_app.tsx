@@ -4,10 +4,11 @@ import DataProvider from '../store/GlobalState'
 import ReactGA from 'react-ga';
 import { useEffect } from 'react';
 import Head from 'next/head'
+import { AppProps } from "next/app"
 
-const trackingID = process.env.TRACKING_GA_ID;
+const trackingID = process.env.TRACKING_GA_ID!;
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     ReactGA.initialize(trackingID);

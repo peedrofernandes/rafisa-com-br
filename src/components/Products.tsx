@@ -1,4 +1,4 @@
-import SliderMain from '../components/Sliders/SliderMain';
+import SliderMain from './Sliders/SliderMain';
 
 import Link from 'next/link';
 
