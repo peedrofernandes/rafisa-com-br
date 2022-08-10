@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution":"Node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "incremental": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "removeComments": true,
+    "strict": true,
+    "skipLibCheck": false,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "isolatedModules": true,
+  },
+  "include": [
+    "src"
+  ]
+}
