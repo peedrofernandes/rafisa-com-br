@@ -1,77 +1,77 @@
-import Header from '../components/Header';
-import EntryBanner from '../components/EntryBanner';
-import BoxOverlap from '../components/BoxOverlap';
-import Info from '../components/Info';
-import Products from '../components/Products';
-import Form from '../components/Form';
-import Footer from '../components/Footer';
-import Notify from '../components/Notify';
-import WhatsAppButton from '../components/WhatsAppButton';
+import { Divider, Grid, Typography } from '@mui/material';
+import type { NextPage } from 'next';
+import Banner from '../components/Banner';
+import BaseGrid from '../components/BaseGrid';
+import EmailContact from '../components/EmailContact';
+import Location from '../components/Location';
+import Presentation from '../components/Presentation';
+import Product from '../components/Product';
 
-import { useContext, useEffect } from 'react';
-import { DataContext } from '../store/GlobalState';
-
-export default function Home(props) {
-  const { state, dispatch } = useContext(DataContext);
-  const { userInfo, notify } = state;
-
-  const closeNotifyHandler = (e) => {
-    const input = e.target;
-    setTimeout(() => {
-      dispatch({ type: 'NOTIFY', payload: {} });
-      input.checked = false;
-    }, 1000)
+const produtos = [
+  {
+    title: "Sacaria convencional",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim placeat natus vero deserunt nulla harum, laudantium consectetur odio. Veritatis excepturi necessitatibus quisquam est animi voluptate, alias debitis dolorem sequi.",
+    buttonText: "Saiba mais"
+  },
+  {
+    title: "Sacaria laminada",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim placeat natus vero deserunt nulla harum, laudantium consectetur odio. Veritatis excepturi necessitatibus quisquam est animi voluptate, alias debitis dolorem sequi.",
+    buttonText: "Saiba mais"
+  },
+  {
+    title: "Sacaria impressa",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae enim placeat natus vero deserunt nulla harum, laudantium consectetur odio. Veritatis excepturi necessitatibus quisquam est animi voluptate, alias debitis dolorem sequi.",
+    buttonText: "Saiba mais"
   }
+]
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      const header = document.querySelector("header");
-      const width = window.innerWidth
-      if (width >= 636 )
-      header.classList.toggle("sticky", window.scrollY > 0);
-    })
-  }, [])
-
+const Home: NextPage = () => {
   return (
     <div>
+      <Banner>
+        <BaseGrid sx={{width: "100%", height: "100%"}}>
+          <Grid item md={12} sm={8} xs={4} sx={{justifyContent: "center"}}>
+            <Typography variant="h2" sx={{ color: "white" }}>
+              Frase de efeito aqui!
+            </Typography>
+          </Grid>
+        </BaseGrid>
+      </Banner>
 
-      <input name="close" id="close" type="radio"></input>
-      <WhatsAppButton></WhatsAppButton>
+      <Divider />
 
-      <input onChange={closeNotifyHandler} name="close2" id="close2" type="radio"></input> 
-      <Notify></Notify>
-      
+      {/* <Product title="Produto 1" buttonText="Saiba Mais"/>
+      <Product buttonText="Saiba Mais" reverse />
+      <Product buttonText="Saiba Mais"/> */}
 
-      <section id="main-section">
-        <Header></Header>
-        {/* <EntryBanner></EntryBanner> */}
+      <section>
+        {
+          produtos.map(({ title, description, buttonText}, key) => (
+            <Product
+              key={key}
+              reverse={key % 2 !== 0 ? true : false}
+              title={title}
+              description={description}
+              buttonText={buttonText}
+            />
+          ))
+        }
       </section>
 
-      <main id="content">
+      <Divider />
 
-        <BoxOverlap></BoxOverlap>
-        <Info></Info>
+      <Presentation />
 
-        <hr />
+      <Divider />
 
-        <Products></Products>
+      <Location />
 
-        <hr />
-        
-        <Form assunto='Genérico' formSource="Página principal"></Form>
-        <iframe
-          className="maps maps-main"
-          width="1200"
-          height="300"
-          allowFullScreen=""
-          loading="lazy"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2949.214627927318!2d-48.842221427079714!3d-26.34560660194376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94deb1a7aa112f43%3A0xe2eec0258506539!2sRafisa%20Com%C3%A9rcio%20de%20Sacarias!5e0!3m2!1spt-BR!2sbr!4v1623527275272!5m2!1spt-BR!2sbr">
-        </iframe>
+      <Divider />
 
-      </main>
-
-      <Footer></Footer>
+      <EmailContact />
 
     </div>
   )
 }
+
+export default Home
