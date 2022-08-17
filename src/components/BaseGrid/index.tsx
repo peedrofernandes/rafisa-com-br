@@ -1,4 +1,5 @@
 import { Grid, styled } from "@mui/material";
+import React from "react";
 import { CSSProperties, ReactNode } from "react";
 
 // Specifications of Material Design

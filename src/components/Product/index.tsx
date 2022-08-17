@@ -1,4 +1,5 @@
 import { Box, Button, Grid, Paper, SxProps, Typography } from "@mui/material";
+import React from "react";
 import BaseGrid from "../BaseGrid";
 
 // Simple components

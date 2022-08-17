@@ -1,5 +1,6 @@
 import { Divider, Grid, Typography } from '@mui/material';
 import type { NextPage } from 'next';
+import React from 'react';
 import Banner from '../components/Banner';
 import BaseGrid from '../components/BaseGrid';
 import EmailContact from '../components/EmailContact';
