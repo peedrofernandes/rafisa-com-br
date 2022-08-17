@@ -1,4 +1,5 @@
 import { Box, Button, ButtonGroup, Grid, styled, Typography } from "@mui/material";
+import React from "react";
 import BaseGrid from "../../../BaseGrid";
 
 const FooterContainer = styled(Box)(({ theme }) => ({

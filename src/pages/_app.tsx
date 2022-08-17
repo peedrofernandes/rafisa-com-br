@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import defaultTheme from "../themes/DefaultTheme";
 import "../styles/App.css";
 import TwelveColumns from "../components/tmp/TwelveColumns";
+import React from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
