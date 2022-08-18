@@ -5,13 +5,14 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 
 type LayoutProps = {
-  children: ReactNode
+  children: ReactNode,
+  headerAnimated: boolean
 }
 
-function Layout({ children }: LayoutProps) {
+function Layout({ children, headerAnimated }: LayoutProps) {
   return (
     <>
-      <Header />
+      <Header animated={headerAnimated} />
       {children}
       <Footer />
     </>

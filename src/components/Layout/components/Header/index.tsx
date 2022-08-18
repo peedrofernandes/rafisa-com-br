@@ -4,6 +4,7 @@ import Icon from "../../../CustomImage";
 import BaseGrid from "../../../BaseGrid";
 import React, { CSSProperties, useEffect, useState } from "react";
 import { useScrollPosition } from "../../../../hooks";
+import Link from "next/link";
 
 const HeaderContainer = styled(AppBar)(({ theme }) => ({
   background: "none",
@@ -11,49 +12,60 @@ const HeaderContainer = styled(AppBar)(({ theme }) => ({
 
 const pages = ["Sobre", "Produtos", "Contato"];
 
-function Header() {
+const defaultSx = {
+  defaultDesktopSx: {
+    display: { xs: "none", sm: "none", md: "block" },
+    background: "#fff"
+  },
+  defaultMobileSx: {
+    display: { xs: "block", md: "none" },
+    background: "#fff"
+  },
+  topScrollDesktopSx: {
+    display: { xs: "none", sm: "none", md: "block" },
+    background: "none"
+  },
+  topScrollMobileSx: {
+    display: { xs: "block", md: "none" },
+    background: "none"
+  },
+}
+
+function Header({ animated }: { animated: boolean }) {
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [topScroll, setTopScroll] = useState<boolean>(true);
-  const [desktopSx, setDesktopSx] = useState({});
-  const [mobileSx, setMobileSx] = useState({});
+  const [desktopSx, setDesktopSx] = useState(defaultSx.defaultDesktopSx);
+  const [mobileSx, setMobileSx] = useState(defaultSx.defaultMobileSx);
 
   const scrollPosition = useScrollPosition();
 
-  useEffect(() => {
-    if (scrollPosition > 0) {
+  if (animated) {
+    useEffect(() => {
+      if (scrollPosition > 0) {
+        if (topScroll) {
+          setTopScroll(false);
+          console.log("topScroll is false!")
+        }
+      } else if (scrollPosition === 0) {
+        if (!topScroll) {
+          setTopScroll(true);
+          console.log("topScroll is true!")
+        }
+      }
+    }, [scrollPosition])
+  
+    useEffect(() => {
       if (topScroll) {
-        setTopScroll(false);
-        console.log("topScroll is false!")
+        setDesktopSx(defaultSx.topScrollDesktopSx);
+        setMobileSx(defaultSx.topScrollMobileSx);
+      } else {
+        setDesktopSx(defaultSx.defaultDesktopSx);
+        setMobileSx(defaultSx.defaultMobileSx);
       }
-    } else if (scrollPosition === 0) {
-      if (!topScroll) {
-        setTopScroll(true);
-        console.log("topScroll is true!")
-      }
-    }
-  }, [scrollPosition])
+    }, [topScroll]);
+  }
 
-  useEffect(() => {
-    if (topScroll) {
-      setDesktopSx({
-        display: { xs: "none", sm: "none", md: "block" },
-        background: "none"
-      });
-      setMobileSx({
-        display: { xs: "block", md: "none" },
-        background: "none"
-      })
-    } else {
-      setDesktopSx({
-        display: { xs: "none", sm: "none", md: "block" },
-        background: "#fff"
-      });
-      setMobileSx({
-        display: { xs: "block", md: "none" },
-        background: "#fff"
-      })
-    }
-  }, [topScroll])
+
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -64,22 +76,31 @@ function Header() {
   }
 
   return (
-    <HeaderContainer elevation={!topScroll ? 1 : 0}>
+    <HeaderContainer elevation={!animated || !topScroll ? 1 : 0}>
       <Box sx={desktopSx}>
         <BaseGrid>
-          <Grid item md={8} lg={6} direction="row">
-            <Icon src="assets/logos/logo-v3.svg" height="96px" sx={{ padding: "16px" }} />
-          </Grid>
+          
+          <Link href="/">
+            <Grid item md={8} lg={6} direction="row">
+              <IconButton>
+                <Icon src="assets/logos/logo-v3.svg" height="96px" sx={{ padding: "16px" }} />
+              </IconButton>
+            </Grid>
+          </Link>
+
           <Grid item md={4} lg={6} sx={{justifyContent: "space-between"}}>
             {pages.map((page) => (
-              <Button
-                color={topScroll ? "secondary" : "primary"}
-                key={page}
-              >
-                {page}
-              </Button>
+              <Link href={`/${page}`}>
+                <Button
+                  color={animated && topScroll ? "secondary" : "primary"}
+                  key={page}
+                >
+                  {page}
+                </Button>
+              </Link>
             ))}
           </Grid>
+
         </BaseGrid>
       </Box>
 
@@ -109,9 +130,11 @@ function Header() {
             onClose={handleCloseNavMenu}  
           >
             {pages.map((page) => (
-              <MenuItem key={page} sx={{ width: "100vw" }}>
-                <Typography textAlign="center">{page}</Typography>
-              </MenuItem>
+              <Link href={`/${page}`}>
+                <MenuItem key={page} sx={{ width: "100vw" }}>
+                  <Typography textAlign="center">{page}</Typography>
+                </MenuItem>
+              </Link>
             ))}
           </Menu>
 

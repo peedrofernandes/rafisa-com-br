@@ -11,9 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider theme={defaultTheme}>
       <CssBaseline />
       <TwelveColumns />
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <Component {...pageProps} />
     </ThemeProvider>
   )
 }
