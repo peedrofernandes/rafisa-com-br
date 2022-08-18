@@ -8,9 +8,16 @@ import { createTheme } from "@mui/material";
 // Large (desktop): 1440+dp
 
 const theme = createTheme({
-
+  typography: {
+    fontFamily: "Montserrat, sans-serif",
+    fontSize: 14,
+    h1: { fontSize: "4.209rem" },
+    h2: { fontSize: "3.157rem" },
+    h3: { fontSize: "2.359rem" },
+    h4: { fontSize: "1.777rem" },
+    h5: { fontSize: "1.333rem" },
+  },
   palette: {
-    
     primary: {
       main: "#2B4C9A",
       light: "#ffffff",
@@ -19,10 +26,6 @@ const theme = createTheme({
     secondary: {
       main: "#F4C22A"
     },
-
-  },
-  typography: {
-    fontFamily: "Montserrat, sans-serif"
   },
   components: {
     MuiGrid: {

@@ -12,7 +12,7 @@
     "strict": true,
     "skipLibCheck": false,
     "forceConsistentCasingInFileNames": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "noEmit": true,
     "isolatedModules": true,
     "lib": [
