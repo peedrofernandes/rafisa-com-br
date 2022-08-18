@@ -30,7 +30,7 @@ const produtos = [
 const Home: NextPage = () => {
   return (
     <div>
-      <Layout headerAnimated={false}>
+      <Layout headerAnimated={true}>
 
         <Banner>
           <BaseGrid sx={{width: "100%", height: "100%"}}>

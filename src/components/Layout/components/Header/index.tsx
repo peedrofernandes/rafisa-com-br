@@ -6,11 +6,11 @@ import React, { CSSProperties, useEffect, useState } from "react";
 import { useScrollPosition } from "../../../../hooks";
 import Link from "next/link";
 
+const pages = ["Sobre", "Produtos", "Contato"];
+
 const HeaderContainer = styled(AppBar)(({ theme }) => ({
   background: "none",
 }));
-
-const pages = ["Sobre", "Produtos", "Contato"];
 
 const defaultSx = {
   defaultDesktopSx: {
@@ -31,11 +31,14 @@ const defaultSx = {
   },
 }
 
+
 function Header({ animated }: { animated: boolean }) {
+
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [topScroll, setTopScroll] = useState<boolean>(true);
   const [desktopSx, setDesktopSx] = useState(defaultSx.defaultDesktopSx);
   const [mobileSx, setMobileSx] = useState(defaultSx.defaultMobileSx);
+
 
   const scrollPosition = useScrollPosition();
 
@@ -76,7 +79,10 @@ function Header({ animated }: { animated: boolean }) {
   }
 
   return (
-    <HeaderContainer elevation={!animated || !topScroll ? 1 : 0}>
+    <HeaderContainer
+      elevation={!animated || !topScroll ? 1 : 0}
+      sx={animated ? { position: "fixed" } : { position: "sticky" }}
+    >
       <Box sx={desktopSx}>
         <BaseGrid>
           
