@@ -8,16 +8,13 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
       
-      - name: Install dependencies
-        run: npm ci 
-
-      - name: Build app
-        run: npm run build
-
-      - name: Start app
-        run: npm start
+      - name: Shut down all running containers and bring them up again
+        run: |
+          docker compose down
+          docker compose build
+          docker compose up -d
