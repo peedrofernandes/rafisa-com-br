@@ -2,6 +2,7 @@ const express = require('express');
 const next = require('next');
 
 const dev = process.env.NODE_ENV !== 'production';
+const port = dev ? 3000 : 80
 const app = next({ dev });
 
 const url = process.env.BASE_URL;
@@ -26,9 +27,9 @@ app.prepare().then(() => {
 
   server.get("*", (req, res) => handle(req, res));
 
-  server.listen(3000, (error) => {
+  server.listen(port, (error) => {
     if (error) throw error;
-    console.error('Listening on port 3000');
+    console.error(`Running - Listening on port ${port}!`);
   })
 }).catch((error) => {
   console.error(error);
