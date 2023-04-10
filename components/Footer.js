@@ -1,5 +1,9 @@
 import ReactGA from 'react-ga';
 
+const PhonecallIcon = "/assets/icons/phone-call.svg"
+const EmailIcon = "/assets/icons/email (1).svg"
+const WhatsappIcon = "/assets/icons/whatsapp.svg"
+
 export default function Footer(props) {
 
   const eventHandler = (category, action) => {
@@ -20,15 +24,15 @@ export default function Footer(props) {
         <ul className="contact column">
           <h4>Contato: </h4>
           <li>
-            <img src="/assets/icons/phone-call.svg" className="logo-svg" alt="Logo telefone" />
+            <img src={PhonecallIcon} className="logo-svg" alt="Logo telefone" />
       (47) 3455&#8209;0780
     </li>
           <li className="mail">
-            <img src="/assets/icons/email (1).svg" className="logo-svg" alt="E-mail logo" />
+            <img src={EmailIcon} className="logo-svg" alt="E-mail logo" />
             <a href="mailto:rafisa@rafisa.com.br" onClick={() => { eventHandler("Botão", "Botão de e-mail (rodapé)") }}>rafisa@rafisa.com.br</a>
     </li>
           <li className="whats">
-            <img src="/assets/icons/whatsapp.svg" className="logo-svg" alt="Logo WhatsApp" />
+            <img src={WhatsappIcon} className="logo-svg" alt="Logo WhatsApp" />
             <a onClick={() => {eventHandler("Botão", "Botão de Whatsapp (rodapé)")}} href="https://api.whatsapp.com/send?phone=5547991973626&text=Oi,%20eu%20gostaria%20de%20saber%20mais%20sobre%20a%20Rafisa!">(47) 9 9177&#8209;3626</a>
     </li>
         </ul>

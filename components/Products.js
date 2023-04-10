@@ -1,7 +1,5 @@
 import SliderMain from '../components/Sliders/SliderMain';
 
-import Link from 'next/link';
-
 export default function Products(props) {
   return (
     <section id="products">

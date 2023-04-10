@@ -1,7 +1,8 @@
 import { DataContext } from '../store/GlobalState';
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import Toast from './Toast';
 
+const CancelIcon = "/assets/icons/cancel (1).svg"
 
 export default function Notify() {
 
@@ -14,7 +15,7 @@ export default function Notify() {
     <Toast>
       <div className="close">
         <label htmlFor="close2">
-          <img id="close-btn" src="/assets/icons/cancel (1).svg"></img>
+          <img id="close-btn" src={CancelIcon} />
         </label>
       </div>
 

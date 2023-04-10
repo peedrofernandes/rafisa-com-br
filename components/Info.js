@@ -1,3 +1,5 @@
+const VitraBanner = "/assets/banners/vitrabanner.jpg"
+
 export default function Info(props) {
   return (
     <div className="info">
@@ -25,7 +27,7 @@ export default function Info(props) {
           <div className="right">
 
             <div className="vitra-banner">
-              <img src="/assets/banners/vitrabanner.jpg" alt="Máquina Vitra" />
+              <img src={VitraBanner} alt="Máquina Vitra" />
             </div>
 
           </div>

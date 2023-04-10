@@ -8,6 +8,8 @@ import Footer from '../components/Footer';
 import Notify from '../components/Notify';
 import WhatsAppButton from '../components/WhatsAppButton';
 
+const ScrollScript = "/scripts/scroll.js"
+
 import { useContext, useEffect } from 'react';
 import { DataContext } from '../store/GlobalState';
 
@@ -64,7 +66,7 @@ export default function Home(props) {
       </main>
 
       <Footer></Footer>
-      <script src="/scripts/scroll.js"></script>
+      <script src={ScrollScript}></script>
 
     </div>
   )
