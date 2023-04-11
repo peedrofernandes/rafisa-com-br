@@ -12,9 +12,6 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-
-      - name: Create .nojekyll file
-        run: touch .nojekyll
       
       - name: Shut down all running containers and bring them up again
         run: |
