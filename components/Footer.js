@@ -1,8 +1,9 @@
 import ReactGA from 'react-ga';
+import useImgUrl from '../utils/useImgUrl';
 
-const PhonecallIcon = "/assets/icons/phone-call.svg"
-const EmailIcon = "/assets/icons/email (1).svg"
-const WhatsappIcon = "/assets/icons/whatsapp.svg"
+const PhonecallIcon = useImgUrl("/assets/icons/phone-call.svg")
+const EmailIcon = useImgUrl("/assets/icons/email (1).svg")
+const WhatsappIcon = useImgUrl("/assets/icons/whatsapp.svg")
 
 export default function Footer(props) {
 

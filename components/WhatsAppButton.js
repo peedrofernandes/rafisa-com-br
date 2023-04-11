@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import ReactGA from 'react-ga';
+import useImgUrl from '../utils/useImgUrl';
 
-const CancelIcon = "/assets/icons/cancel (1).svg"
-const WhatsImg = "/assets/icons/whatsapp-color.svg"
+const CancelIcon = useImgUrl("/assets/icons/cancel (1).svg")
+const WhatsImg = useImgUrl("/assets/icons/whatsapp-color.svg")
 
 export default function WhatsAppButton(props) {
 

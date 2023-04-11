@@ -1,11 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import ReactGA from 'react-ga';
+import useImgUrl from '../utils/useImgUrl';
 
-const RafisaLogo = "/assets/logos/rafisa (2).svg"
-const PhoneLogo = "/assets/icons/phone-call.svg"
-const EmailLogo = "/assets/icons/email (1).svg"
-const WhatsappLogo = "/assets/icons/whatsapp.svg"
+const RafisaLogo = useImgUrl("/assets/logos/rafisa (2).svg")
+const PhoneLogo = useImgUrl("/assets/icons/phone-call.svg")
+const EmailLogo = useImgUrl("/assets/icons/email (1).svg")
+const WhatsappLogo = useImgUrl("/assets/icons/whatsapp.svg")
 
 export default function Header(props) {
 

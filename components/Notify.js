@@ -1,8 +1,9 @@
 import { DataContext } from '../store/GlobalState';
 import { useContext } from 'react';
 import Toast from './Toast';
+import useImgUrl from '../utils/useImgUrl';
 
-const CancelIcon = "/assets/icons/cancel (1).svg"
+const CancelIcon = useImgUrl("/assets/icons/cancel (1).svg")
 
 export default function Notify() {
 

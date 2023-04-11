@@ -71,7 +71,7 @@ img.medium {
 
 #main-section {
   height: 440px;
-  background: url("/assets/banners/banner.jpg");
+  background: url("/rafisa-com-br/assets/banners/banner.jpg");
   background-size: cover;
   background-position:center;
   /* box-shadow: inset 0px 6px 8px rgba(0, 0, 0, 0.658) */
@@ -763,77 +763,77 @@ footer {
 
 
 .convencional .slide_1 {
-  background: url("/assets/images/Convencional/1.JPG") no-repeat;
+  background: url("/rafisa-com-br/assets/images/Convencional/1.JPG") no-repeat;
   background-size: cover;
 }
 .convencional .slide_2 {
-  background: url("/assets/images/Convencional/2.JPG") no-repeat;
+  background: url("/rafisa-com-br/assets/images/Convencional/2.JPG") no-repeat;
   background-size: cover;
 }
 .convencional .slide_3 {
-  background: url("/assets/images/Convencional/3.JPG") no-repeat;
+  background: url("/rafisa-com-br/assets/images/Convencional/3.JPG") no-repeat;
   background-size: cover;
 }
 .convencional .slide_4 {
-  background: url("/assets/images/Convencional/4.JPG") no-repeat;
+  background: url("/rafisa-com-br/assets/images/Convencional/4.JPG") no-repeat;
   background-size: cover;
 }
 .convencional .slide_5 {
-  background: url("/assets/images/Convencional/5.JPG") no-repeat;
+  background: url("/rafisa-com-br/assets/images/Convencional/5.JPG") no-repeat;
   background-size: cover;
 }
 .convencional .slide_6 {
-  background: url("/assets/images/Convencional/6.JPG") no-repeat;
+  background: url("/rafisa-com-br/assets/images/Convencional/6.JPG") no-repeat;
   background-size: cover;
 }
 
 .laminada .slide_1 {
-  background: url("/assets/images/Laminado/1.JPG") no-repeat;
+  background: url("/rafisa-com-br/assets/images/Laminado/1.JPG") no-repeat;
   background-size: cover;
 }
 .laminada .slide_2 {
-  background: url("/assets/images/Laminado/2.JPG") no-repeat;
+  background: url("/rafisa-com-br/assets/images/Laminado/2.JPG") no-repeat;
   background-size: cover;
 }
 .laminada .slide_3 {
-  background: url("/assets/images/Laminado/3.JPG") no-repeat;
+  background: url("/rafisa-com-br/assets/images/Laminado/3.JPG") no-repeat;
   background-size: cover;
 }
 .laminada .slide_4 {
-  background: url("/assets/images/Laminado/4.JPG") no-repeat;
+  background: url("/rafisa-com-br/assets/images/Laminado/4.JPG") no-repeat;
   background-size: cover;
 }
 .laminada .slide_5 {
-  background: url("/assets/images/Laminado/5.JPG") no-repeat;
+  background: url("/rafisa-com-br/assets/images/Laminado/5.JPG") no-repeat;
   background-size: cover;
 }
 .laminada .slide_6 {
-  background: url("/assets/images/Laminado/6.JPG") no-repeat;
+  background: url("/rafisa-com-br/assets/images/Laminado/6.JPG") no-repeat;
   background-size: cover;
 }
 
 .impressa .slide_1 {
-  background: url("/assets/images/Impresso/1.JPG") no-repeat;
+  background: url("/rafisa-com-br/assets/images/Impresso/1.JPG") no-repeat;
   background-size: cover;
 }
 .impressa .slide_2 {
-  background: url("/assets/images/Impresso/2.JPG") no-repeat;
+  background: url("/rafisa-com-br/assets/images/Impresso/2.JPG") no-repeat;
   background-size: cover;
 }
 .impressa .slide_3 {
-  background: url("/assets/images/Impresso/3.JPG") no-repeat;
+  background: url("/rafisa-com-br/assets/images/Impresso/3.JPG") no-repeat;
   background-size: cover;
 }
 .impressa .slide_4 {
-  background: url("/assets/images/Impresso/4.JPG") no-repeat;
+  background: url("/rafisa-com-br/assets/images/Impresso/4.JPG") no-repeat;
   background-size: cover;
 }
 .impressa .slide_5 {
-  background: url("/assets/images/Impresso/5.JPG") no-repeat;
+  background: url("/rafisa-com-br/assets/images/Impresso/5.JPG") no-repeat;
   background-size: cover;
 }
 .impressa .slide_6 {
-  background: url("/assets/images/Impresso/6.JPG") no-repeat;
+  background: url("/rafisa-com-br/assets/images/Impresso/6.JPG") no-repeat;
   background-size: cover;
 }
 
@@ -898,7 +898,7 @@ footer {
 #slide2-5:checked ~ .controls label:nth-child(3),
 #slide3-5:checked ~ .controls label:nth-child(4),
 #slide4-5:checked ~ .controls label:nth-child(1) {
-  background: url("/assets/icons/next.svg") no-repeat;
+  background: url("/rafisa-com-br/assets/icons/next.svg") no-repeat;
   float: right;
   margin: 0 -45px 0 0;
   display: block;
@@ -928,7 +928,7 @@ footer {
 #slide2-5:checked ~ .controls label:nth-last-child(4),
 #slide3-5:checked ~ .controls label:nth-last-child(3),
 #slide4-5:checked ~ .controls label:nth-last-child(2) {
-  background: url("/assets/icons/back.svg") no-repeat;
+  background: url("/rafisa-com-br/assets/icons/back.svg") no-repeat;
   float: left;
   margin: 0 0 0 -45px;
   display: block;
