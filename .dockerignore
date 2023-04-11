@@ -9,3 +9,6 @@ node_modules
 .env.development.local
 .env.production.local
 .env.test.local
+nginx
+.next
+.github
