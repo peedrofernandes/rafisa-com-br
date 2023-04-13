@@ -20,7 +20,7 @@ export default function WhatsAppButton(props) {
 
         <div className="wpp">
         <h4>Fale conosco!</h4>
-        <Link href="https://api.whatsapp.com/send?phone=5547991973626&text=Oi,%20eu%20gostaria%20de%20saber%20mais%20sobre%20a%20Rafisa!">
+        <Link href="https://api.whatsapp.com/send?phone=5547991908897&text=Oi,%20eu%20gostaria%20de%20saber%20mais%20sobre%20a%20Rafisa!">
           <a target="_blank" onClick={() => {eventHandler("Botão", "Botão do whatsapp (card)")}}>
             <img className="whatsimg" src={WhatsImg} />
           </a>

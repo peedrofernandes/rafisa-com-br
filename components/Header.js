@@ -43,13 +43,13 @@ export default function Header(props) {
 
           <li className="mail">
             <img src={EmailLogo} className="logo-svg" alt="E-mail logo" />
-            <a href="mailto:vendas@rafisa.com.br" onClick={() => {eventHandler("Botão", "Botão de e-mail (topo)")}}>vendas@rafisa.com.br</a>
+            <a href="mailto:administrativo@rafisa.com.br" onClick={() => {eventHandler("Botão", "Botão de e-mail (topo)")}}>administrativo@rafisa.com.br</a>
           </li>
 
           <li className="whats">
               <img src={WhatsappLogo} className="logo-svg" alt="Logo WhatsApp" />
-              <a target="_blank" onClick={() => {eventHandler("Botão", "Botão do whatsapp (cabeçalho)") }}href="https://api.whatsapp.com/send?phone=5547991973626&text=Oi,%20eu%20gostaria%20de%20saber%20mais%20sobre%20a%20Rafisa!">
-                (47)&nbsp;9&nbsp;9177&#8209;3626
+              <a target="_blank" onClick={() => {eventHandler("Botão", "Botão do whatsapp (cabeçalho)") }}href="https://api.whatsapp.com/send?phone=5547991908897&text=Oi,%20eu%20gostaria%20de%20saber%20mais%20sobre%20a%20Rafisa!">
+                (47)&nbsp;9&nbsp;9190&#8209;8897
               </a>
           </li>
 
