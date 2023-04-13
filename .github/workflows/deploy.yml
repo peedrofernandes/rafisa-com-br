@@ -26,6 +26,7 @@ jobs:
         script: |
           cd /rafisa-app/testing
           git pull origin main
+          cd /rafisa-app/server
           docker compose down
           docker compose build
           docker compose up -d
