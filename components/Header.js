@@ -34,7 +34,7 @@ export default function Header(props) {
 
       <div>
 
-        <ul className="contact contact-header ">
+        <ul className="contact contact-header">
 
           <li>
             <img src={PhoneLogo} className="logo-svg" alt="Logo telefone" />
@@ -42,8 +42,14 @@ export default function Header(props) {
           </li>
 
           <li className="mail">
-            <img src={EmailLogo} className="logo-svg" alt="E-mail logo" />
-            <a href="mailto:administrativo@rafisa.com.br" onClick={() => {eventHandler("Botão", "Botão de e-mail (topo)")}}>administrativo@rafisa.com.br</a>
+            <div>
+              <img src={EmailLogo} className="logo-svg" alt="E-mail logo" />
+              <a href="mailto:vendas@rafisa.com.br" onClick={() => {eventHandler("Botão", "Botão de e-mail (topo)")}}>vendas@rafisa.com.br</a>
+            </div>  
+            <div>
+              <img src={EmailLogo} className="logo-svg" alt="E-mail logo" />
+              <a href="mailto:administrativo@rafisa.com.br" onClick={() => {eventHandler("Botão", "Botão de e-mail (topo)")}}>administrativo@rafisa.com.br</a>
+            </div>  
           </li>
 
           <li className="whats">

@@ -94,6 +94,10 @@ header.sticky {
 header.sticky > div:last-child {
   margin: inherit;
 }
+.header .nav-menu {
+  display: flex;
+  align-items: center;
+}
 .header ul li a {
   color: rgb(248, 248, 248);
 }
@@ -176,7 +180,6 @@ li.mail:hover, li.whats:hover {
   justify-content: center;
 }
 .contact-header li {
-  margin-right: 8px;
   flex-wrap: nowrap;
 }
 .entry {
@@ -607,14 +610,22 @@ footer {
 .contact {
   display: flex;
   align-items: center;
+  gap: 16px;
 }
 .contact > li {
   display: flex;
+  gap: 8px;
   align-items: center;
-  padding: 6px 0;
 }
-.contact > li > img {
-  margin-right: 8px;
+.header .contact > li.mail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+.contact > li.mail > div {
+  display: flex;
+  gap: 8px;
 }
 
 .footer-info > div{

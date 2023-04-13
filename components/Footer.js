@@ -29,7 +29,7 @@ export default function Footer(props) {
     </li>
           <li className="mail">
             <img src={EmailIcon} className="logo-svg" alt="E-mail logo" />
-            <a href="mailto:rafisa@rafisa.com.br" onClick={() => { eventHandler("Botão", "Botão de e-mail (rodapé)") }}>administrativo@rafisa.com.br</a>
+            <a href="mailto:vendas@rafisa.com.br" onClick={() => { eventHandler("Botão", "Botão de e-mail (rodapé)") }}>vendas@rafisa.com.br</a>
     </li>
           <li className="whats">
             <img src={WhatsappIcon} className="logo-svg" alt="Logo WhatsApp" />
