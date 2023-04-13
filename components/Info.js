@@ -1,6 +1,4 @@
-import useImgUrl from "../utils/useImgUrl"
-
-const VitraBanner = useImgUrl("/assets/banners/vitrabanner.jpg")
+const VitraBanner = "/assets/banners/vitrabanner.jpg"
 
 export default function Info(props) {
   return (

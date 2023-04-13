@@ -10,11 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      
-      - name: Shut down all running containers and bring them up again
-        run: |
-          docker compose down
-          docker compose build
-          docker compose up -d --build
+      - name: Deploy using SSH
+        uses: appleboy/ssh-action@v0.1.9
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            cd /rafisa-app/production
+            git fetch origin rafisa-old
+            git pull origin rafisa-old
+            cd /rafisa-app/server
+            docker compose down
+            docker compose build
+            docker compose up -d
