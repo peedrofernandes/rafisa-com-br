@@ -1,5 +1,4 @@
-# This is a basic workflow to help you get started with Actions
-
+# Automated deploy to VPS workflow
 name: Automated Deploy
 
 # Controls when the workflow will run
@@ -8,21 +7,25 @@ on:
   push:
     branches: [ main ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "deploy"
   deploy:
-    # The type of runner that the job will run on
+    # This workflow will not run directly in the VPS. Instead, it'll run over 
+    # a github provided and hosted environment, and from there it will execute
+    # remote commands on the VPS through SSH.
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
-
-      # Runs a single command using the runners shell
-      - name: Shut down all running containers and bring them up again
-        run: |
+    - name: Deploy using SSH
+      uses: appleboy/ssh-action@v0.1.9
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        passphrase: ${{ secrets.PASSPHRASE }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: 22
+        # Shut down every running container and bring them up again
+        script: |
+          cd /rafisa-app/testing
+          git pull origin main
           docker compose down
-          docker compose build 
+          docker compose build
           docker compose up -d
