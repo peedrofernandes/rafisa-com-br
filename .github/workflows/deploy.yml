@@ -23,10 +23,4 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 22
         # Shut down every running container and bring them up again
-        script: |
-          cd /rafisa-app/testing
-          git pull origin main
-          cd /rafisa-app/server
-          docker compose down
-          docker compose build
-          docker compose up -d
+        script: /bin/bash /rafisa-app/deploy-scripts/deploy-testing.sh
