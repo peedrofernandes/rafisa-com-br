@@ -18,11 +18,4 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
-          script: |
-            cd /rafisa-app/production
-            git fetch origin rafisa-old
-            git pull origin rafisa-old
-            cd /rafisa-app/server
-            docker compose down
-            docker compose build --no-cache
-            docker compose up -d
+          script: /bin/bash /rafisa-app/deploy-scripts/deploy-testing.sh
