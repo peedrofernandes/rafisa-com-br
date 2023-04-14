@@ -6,10 +6,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "export": "next export",
     "deploy": "npm run build && npm run export && touch ./out/.nojekyll"
-  },   
+  },
   "dependencies": {
     "cleave.js": "^1.6.0",
     "express": "^4.17.1",
@@ -20,5 +21,8 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-ga": "^3.3.0"
+  },
+  "devDependencies": {
+    "next-sitemap": "^4.0.7"
   }
 }

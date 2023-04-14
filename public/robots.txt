@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://rafisa.com.br
+
+# Sitemaps
+Sitemap: https://rafisa.com.br/sitemap.xml
