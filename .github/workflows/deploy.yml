@@ -18,4 +18,4 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
-          script: /bin/bash /rafisa-app/deploy-scripts/deploy-testing.sh
+          script: /bin/bash /rafisa-app/deploy-scripts/deploy-production.sh
