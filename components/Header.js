@@ -45,11 +45,7 @@ export default function Header(props) {
             <div>
               <img src={EmailLogo} className="logo-svg" alt="E-mail logo" />
               <a href="mailto:vendas@rafisa.com.br" onClick={() => {eventHandler("Botão", "Botão de e-mail (topo)")}}>vendas@rafisa.com.br</a>
-            </div>  
-            <div>
-              <img src={EmailLogo} className="logo-svg" alt="E-mail logo" />
-              <a href="mailto:administrativo@rafisa.com.br" onClick={() => {eventHandler("Botão", "Botão de e-mail (topo)")}}>administrativo@rafisa.com.br</a>
-            </div>  
+            </div>
           </li>
 
           <li className="whats">
