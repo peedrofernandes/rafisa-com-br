@@ -7,6 +7,7 @@ import Form from '../components/Form';
 import Footer from '../components/Footer';
 import Notify from '../components/Notify';
 import WhatsAppButton from '../components/WhatsAppButton';
+import Head from "next/head"
 
 const ScrollScript = "/scripts/scroll.js"
 
@@ -29,6 +30,12 @@ export default function Home(props) {
 
   return (
     <div>
+
+      <Head>
+        <title>Rafisa - Embalagens de ráfia</title>
+        <meta name="description" content="Sacos de ráfia para armazenamento de Fertilizantes, rações, entulhos, cereais, sal, peças metálicas, materiais de construção civil, contenção de barrancos, dentre muitos outros!"/>
+        <link rel="canonical" href="https://rafisa.com.br/"/>
+      </Head>
 
       <input name="close" id="close" type="radio"></input>
       <WhatsAppButton></WhatsAppButton>

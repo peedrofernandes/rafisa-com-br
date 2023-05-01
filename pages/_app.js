@@ -16,11 +16,6 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <div>
-      <Head>
-        <title>Rafisa - Embalagens de Ráfia</title>
-        <meta name="description" content="Sacos de ráfia para armazenamento de Fertilizantes, rações, entulhos, cereais, sal, peças metálicas, materiais de construção civil, contenção de barrancos, dentre muitos outros!"/>
-        <link rel="canonical" href="https://rafisa.com.br/"/>
-      </Head>
     <DataProvider>
       <Component {...pageProps} />
     </DataProvider>

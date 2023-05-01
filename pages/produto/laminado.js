@@ -1,3 +1,5 @@
+import Head from "next/head"
+
 import Header from '../../components/Header'
 import SliderProduto from '../../components/Sliders/SliderProduto'
 import Form from '../../components/Form';
@@ -21,6 +23,12 @@ export default function Produto(props) {
 
   return (
     <div>
+
+      <Head>
+        <title>Rafisa - Sacos de ráfia laminados reforçados</title>
+        <meta name="description" content="Sacaria de ráfia com revestimento extra para armazenamento de materiais pontiagudos ou pesados, fornecendo despreocupação com relaçao ao transporte da sua mercadoria!"/>
+        <link rel="canonical" href="https://rafisa.com.br/produto/laminado/"/>
+      </Head>
 
       <input name="close" id="close" type="radio"></input>
       <WhatsAppButton></WhatsAppButton>

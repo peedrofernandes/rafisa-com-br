@@ -1,3 +1,5 @@
+import Head from "next/head"
+
 import Header from '../../components/Header'
 import SliderProduto from '../../components/Sliders/SliderProduto'
 import Form from '../../components/Form';
@@ -22,6 +24,12 @@ export default function Produto(props) {
 
   return (
     <div>
+
+    <Head>
+      <title>Rafisa - Sacos de ráfia convencionais</title>
+      <meta name="description" content="Sacos de ráfia comuns para armazenamento de fertilizantes, rações, entulhos, cereais, sal, peças metálicas, materiais de construção civil, contenção de barrancos, dentre muitos outros!"/>
+      <link rel="canonical" href="https://rafisa.com.br/produto/convencional/"/>
+    </Head>
 
       <input name="close" id="close" type="radio"></input>
       <WhatsAppButton></WhatsAppButton>

@@ -1,3 +1,5 @@
+import Head from "next/head"
+
 import Header from '../../components/Header'
 import SliderProduto from '../../components/Sliders/SliderProduto'
 import Form from '../../components/Form';
@@ -22,6 +24,12 @@ export default function Produto(props) {
 
   return (
     <div>
+
+      <Head>
+        <title>Rafisa - Sacos de ráfia impressos</title>
+        <meta name="description" content="Sacaria de ráfia impressa com a sua marca! Solicite a produção de embalagens com impressões totalmente customizáveis com o visual da sua empresa agora mesmo."/>
+        <link rel="canonical" href="https://rafisa.com.br/produto/impresso/"/>
+      </Head>
 
       <input name="close" id="close" type="radio"></input>
       <WhatsAppButton></WhatsAppButton>
