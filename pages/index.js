@@ -54,11 +54,7 @@ export default function Home(props) {
         <BoxOverlap></BoxOverlap>
         <Info></Info>
 
-        <hr />
-
         <Products></Products>
-
-        <hr />
         
         <Form assunto='Genérico' formSource="Página principal"></Form>
         <iframe

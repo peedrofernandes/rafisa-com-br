@@ -3,12 +3,12 @@ import SliderMain from '../components/Sliders/SliderMain';
 export default function Products(props) {
   return (
     <section id="products">
-      <h1>O que a Rafisa oferece</h1>
+      <h2 style={{ textAlign: "center" }}>O que a Rafisa oferece</h2>
 
       <article className="product show-on-scroll">
 
         <div className="aside">
-          <h3>Sacaria <strong>Convencional</strong></h3>
+          <h3>Sacaria<strong>Convencional</strong></h3>
         </div>
 
         <div className="card">
