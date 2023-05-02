@@ -71,7 +71,7 @@ img.medium {
 
 #main-section {
   height: 440px;
-  background: url("/assets/banners/banner.jpg");
+  background: url("/assets/banners/backgroundBannerPrincipal.jpg");
   background-size: cover;
   background-position:center;
   /* box-shadow: inset 0px 6px 8px rgba(0, 0, 0, 0.658) */
@@ -780,77 +780,77 @@ footer {
 
 
 .convencional .slide_1 {
-  background: url("/assets/images/Convencional/1.JPG") no-repeat;
+  background: url("/assets/images/Convencional/sacariaConvencional1.JPG") no-repeat;
   background-size: cover;
 }
 .convencional .slide_2 {
-  background: url("/assets/images/Convencional/2.JPG") no-repeat;
+  background: url("/assets/images/Convencional/sacariaConvencional2.JPG") no-repeat;
   background-size: cover;
 }
 .convencional .slide_3 {
-  background: url("/assets/images/Convencional/3.JPG") no-repeat;
+  background: url("/assets/images/Convencional/sacariaConvencional3.JPG") no-repeat;
   background-size: cover;
 }
 .convencional .slide_4 {
-  background: url("/assets/images/Convencional/4.JPG") no-repeat;
+  background: url("/assets/images/Convencional/sacariaConvencional4.JPG") no-repeat;
   background-size: cover;
 }
 .convencional .slide_5 {
-  background: url("/assets/images/Convencional/5.JPG") no-repeat;
+  background: url("/assets/images/Convencional/sacariaConvencional5.JPG") no-repeat;
   background-size: cover;
 }
 .convencional .slide_6 {
-  background: url("/assets/images/Convencional/6.JPG") no-repeat;
+  background: url("/assets/images/Convencional/sacariaConvencional6.JPG") no-repeat;
   background-size: cover;
 }
 
 .laminada .slide_1 {
-  background: url("/assets/images/Laminado/1.JPG") no-repeat;
+  background: url("/assets/images/Laminado/sacariaLaminada1.JPG") no-repeat;
   background-size: cover;
 }
 .laminada .slide_2 {
-  background: url("/assets/images/Laminado/2.JPG") no-repeat;
+  background: url("/assets/images/Laminado/sacariaLaminada2.JPG") no-repeat;
   background-size: cover;
 }
 .laminada .slide_3 {
-  background: url("/assets/images/Laminado/3.JPG") no-repeat;
+  background: url("/assets/images/Laminado/sacariaLaminada3.JPG") no-repeat;
   background-size: cover;
 }
 .laminada .slide_4 {
-  background: url("/assets/images/Laminado/4.JPG") no-repeat;
+  background: url("/assets/images/Laminado/sacariaLaminada4.JPG") no-repeat;
   background-size: cover;
 }
 .laminada .slide_5 {
-  background: url("/assets/images/Laminado/5.JPG") no-repeat;
+  background: url("/assets/images/Laminado/sacariaLaminada5.JPG") no-repeat;
   background-size: cover;
 }
 .laminada .slide_6 {
-  background: url("/assets/images/Laminado/6.JPG") no-repeat;
+  background: url("/assets/images/Laminado/sacariaLaminada6.JPG") no-repeat;
   background-size: cover;
 }
 
 .impressa .slide_1 {
-  background: url("/assets/images/Impresso/1.JPG") no-repeat;
+  background: url("/assets/images/Impresso/sacariaConvencionalImpressa1.JPG") no-repeat;
   background-size: cover;
 }
 .impressa .slide_2 {
-  background: url("/assets/images/Impresso/2.JPG") no-repeat;
+  background: url("/assets/images/Impresso/sacariaConvencionalImpressa2.JPG") no-repeat;
   background-size: cover;
 }
 .impressa .slide_3 {
-  background: url("/assets/images/Impresso/3.JPG") no-repeat;
+  background: url("/assets/images/Impresso/sacariaConvencionalImpressa3.JPG") no-repeat;
   background-size: cover;
 }
 .impressa .slide_4 {
-  background: url("/assets/images/Impresso/4.JPG") no-repeat;
+  background: url("/assets/images/Impresso/sacariaConvencionalImpressa4.JPG") no-repeat;
   background-size: cover;
 }
 .impressa .slide_5 {
-  background: url("/assets/images/Impresso/5.JPG") no-repeat;
+  background: url("/assets/images/Impresso/sacariaConvencionalImpressa5.JPG") no-repeat;
   background-size: cover;
 }
 .impressa .slide_6 {
-  background: url("/assets/images/Impresso/6.JPG") no-repeat;
+  background: url("/assets/images/Impresso/sacariaConvencionalImpressa6.JPG") no-repeat;
   background-size: cover;
 }
 

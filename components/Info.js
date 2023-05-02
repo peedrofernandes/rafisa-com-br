@@ -1,4 +1,4 @@
-const VitraBanner = "/assets/banners/vitrabanner.jpg"
+const VitraBanner = "/assets/banners/fotoMaquinaVitra.jpg"
 
 export default function Info(props) {
   return (

@@ -9,6 +9,8 @@ import WhatsAppButton from '../../components/WhatsAppButton';
 
 import { useContext } from 'react';
 import { DataContext } from '../../store/GlobalState';
+import Script from "next/script"
+
 
 export default function Produto(props) {
 
