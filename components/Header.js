@@ -25,10 +25,10 @@ export default function Header(props) {
 
       <div className="nav-menu">
         <ul>
-          <li><Link href="/#main-section"><a>Home</a></Link></li>
-          <li><Link href="/#buttons"><a>Sobre</a></Link></li>
-          <li><Link href="/#products"><a>Produtos</a></Link></li>
-          <li><Link href="/#form"><a>Contato</a></Link></li>
+          <li><Link href="/#main-section">Home</Link></li>
+          <li><Link href="/#buttons">Sobre</Link></li>
+          <li><Link href="/#products">Produtos</Link></li>
+          <li><Link href="/#form">Contato</Link></li>
         </ul>
       </div>
 

@@ -9,10 +9,25 @@ import WhatsAppButton from '../../components/WhatsAppButton';
 
 import { DataContext } from '../../store/GlobalState';
 import { useContext } from 'react';
+import Script from "next/script";
 
 export default function Produto(props) {
 
   const { state, dispatch } = useContext(DataContext);
+
+  const sacariaConvencionalStructuredData = {
+    "@id": "https://rafisa.com.br/produto/convencional/schema",
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Sacaria convencional",
+    "description": "Sacaria de polipropileno para armazenamento de fertilizantes, grãos, terra, materiais de construção civil, ferramentas, contenção de barrancos, dentre muitas outras utilidades!",
+    "brand": {
+      "@type": "Brand",
+      "name": "Rafisa"
+    },
+    "material": "Polipropileno - Ráfia",
+    "url": "https://rafisa.com.br/produto/convencional"
+  }
 
   const closeNotifyHandler = (e) => {
     const input = e.target;
@@ -28,7 +43,13 @@ export default function Produto(props) {
     <Head>
       <title>Rafisa - Sacos de ráfia convencionais</title>
       <meta name="description" content="Sacos de ráfia comuns para armazenamento de fertilizantes, rações, entulhos, cereais, sal, peças metálicas, materiais de construção civil, contenção de barrancos, dentre muitos outros!"/>
-      <link rel="canonical" href="https://rafisa.com.br/produto/convencional/"/>
+      <link rel="canonical" href="https://rafisa.com.br/produto/convencional/" />
+      <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(sacariaConvencionalStructuredData)
+        }}
+      />
     </Head>
 
       <input name="close" id="close" type="radio"></input>

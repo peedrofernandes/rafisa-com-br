@@ -1,26 +1,27 @@
 {
-  "homepage": ".",
-  "name": "rafisa-app",
-  "version": "0.1.0",
-  "private": true,
+  "name": "rafisa-com-br",
+  "version": "1.0.0",
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next-sitemap.config.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "next-sitemap",
-    "start": "next start",
-    "export": "next export",
-    "deploy": "npm run build && npm run export && touch ./out/.nojekyll"
+    "start": "next start"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "cleave.js": "^1.6.0",
-    "express": "^4.17.1",
-    "jquery": "^3.6.0",
-    "next": "^10.2.3",
-    "next-sitemap": "^4.0.7",
-    "nodemailer": "^6.6.1",
-    "nodemon": "^2.0.7",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-ga": "^3.3.0"
+    "express": "^4.18.2",
+    "jquery": "^3.6.4",
+    "next": "^13.3.4",
+    "next-sitemap": "^4.0.9",
+    "nodemailer": "^6.9.1",
+    "nodemon": "^2.0.22",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-ga": "^3.3.1"
   }
 }

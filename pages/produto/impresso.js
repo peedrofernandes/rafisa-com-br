@@ -14,6 +14,20 @@ export default function Produto(props) {
 
   const { state, dispatch } = useContext(DataContext);
 
+  const sacariaImpressaStructuredData = {
+    "@id": "https://rafisa.com.br/produto/impresso/schema",
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Sacaria impressa",
+    "description": "Sacaria de polipropileno impressa com a sua marca para armazenamento de fertilizantes, grãos, terra, materiais de construção civil, ferramentas, contenção de barrancos, dentre muitas outras utilidades!",
+    "brand": {
+      "@type": "Brand",
+      "name": "Rafisa"
+    },
+    "material": "Polipropileno - Ráfia",
+    "url": "https://rafisa.com.br/produto/impresso"
+  }
+
   const closeNotifyHandler = (e) => {
     const input = e.target;
     setTimeout(() => {
@@ -28,7 +42,13 @@ export default function Produto(props) {
       <Head>
         <title>Rafisa - Sacos de ráfia impressos</title>
         <meta name="description" content="Sacaria de ráfia impressa com a sua marca! Solicite a produção de embalagens com impressões totalmente customizáveis com o visual da sua empresa agora mesmo."/>
-        <link rel="canonical" href="https://rafisa.com.br/produto/impresso/"/>
+        <link rel="canonical" href="https://rafisa.com.br/produto/impresso/" />
+        <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(sacariaImpressaStructuredData)
+        }}
+      />
       </Head>
 
       <input name="close" id="close" type="radio"></input>

@@ -7,7 +7,9 @@ import Form from '../components/Form';
 import Footer from '../components/Footer';
 import Notify from '../components/Notify';
 import WhatsAppButton from '../components/WhatsAppButton';
+
 import Head from "next/head"
+import Script from "next/script"
 
 const ScrollScript = "/scripts/scroll.js"
 
@@ -15,10 +17,77 @@ import { useContext, useEffect } from 'react';
 import { DataContext } from '../store/GlobalState';
 
 export default function Home(props) {
-
-
   const { state, dispatch } = useContext(DataContext);
   const { userInfo, notify } = state;
+
+  const localBusinessStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Brasil",
+      "addressRegion": "SC",
+      "streetAddress": "Rua São Paulo 4351, bairro Floresta, Joinville - SC",
+      "postalCode": "89208-545",
+    },
+    "description": "Fábrica de embalagens de ráfia localizada na cidade de Joinville, Santa Catarina",
+    "name": "Rafisa Comércio de Sacarias",
+    "telephone": "(47) 3455-0780",
+    "openingHours": [
+      "Mo-Th 8:00-18:00",
+      "Fr 8:00-17:00"
+    ],
+  }
+
+  const productSetStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ProductGroup",
+    "brand": "Rafisa - Comércio de Sacarias",
+    "category": "Embalagens de ráfia para armazenamento de fertilizantes, entulhos, grãos, contenção de morros, materiais de construção, dentre muitos outros",
+    "keywords": "Sacaria de ráfia, Ráfia, Saco de Ráfia, Embalagens de ráfia, Polipropileno, Sacaria para Contenção, Saco para entulho, Saco para grãos, Saco para terras",
+    "hasVariant": [
+      {
+        "@id": "https://rafisa.com.br/produto/convencional/schema",
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Sacaria convencional",
+        "description": "Sacaria de polipropileno para armazenamento de fertilizantes, grãos, terra, materiais de construção civil, ferramentas, contenção de barrancos, dentre muitas outras utilidades!",
+        "brand": {
+          "@type": "Brand",
+          "name": "Rafisa"
+        },
+        "material": "Polipropileno - Ráfia",
+        "url": "https://rafisa.com.br/produto/convencional"
+      },
+      {
+        "@id": "https://rafisa.com.br/produto/impresso/schema",
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Sacaria impressa",
+        "description": "Sacaria de polipropileno impressa com a sua marca para armazenamento de fertilizantes, grãos, terra, materiais de construção civil, ferramentas, contenção de barrancos, dentre muitas outras utilidades!",
+        "brand": {
+          "@type": "Brand",
+          "name": "Rafisa"
+        },
+        "material": "Polipropileno - Ráfia",
+        "url": "https://rafisa.com.br/produto/impresso"
+      },
+      {
+        "@id": "https://rafisa.com.br/produto/laminado/schema",
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Sacaria laminada",
+        "description": "Sacaria de polipropileno laminada para armazenamento de fertilizantes, grãos, terra, materiais de construção civil, ferramentas, contenção de barrancos, dentre muitas outras utilidades!",
+        "brand": {
+          "@type": "Brand",
+          "name": "Rafisa"
+        },
+        "material": "Polipropileno - Ráfia",
+        "url": "https://rafisa.com.br/produto/convencional"
+      }
+      
+    ]
+  }
 
   const closeNotifyHandler = (e) => {
     const input = e.target;
@@ -34,7 +103,19 @@ export default function Home(props) {
       <Head>
         <title>Rafisa - Embalagens de ráfia</title>
         <meta name="description" content="Sacos de ráfia para armazenamento de Fertilizantes, rações, entulhos, cereais, sal, peças metálicas, materiais de construção civil, contenção de barrancos, dentre muitos outros!"/>
-        <link rel="canonical" href="https://rafisa.com.br/"/>
+        <link rel="canonical" href="https://rafisa.com.br/" />
+        <Script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessStructuredData)
+          }}
+        />
+        <Script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(productSetStructuredData)
+          }}
+        />
       </Head>
 
       <input name="close" id="close" type="radio"></input>

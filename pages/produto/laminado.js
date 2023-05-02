@@ -13,6 +13,20 @@ export default function Produto(props) {
 
   const { state, dispatch } = useContext(DataContext);
 
+  const sacariaLaminadaStructuredData = {
+    "@id": "https://rafisa.com.br/produto/laminado/schema",
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Sacaria laminada",
+    "description": "Sacaria de polipropileno laminada para armazenamento de fertilizantes, grãos, terra, materiais de construção civil, ferramentas, contenção de barrancos, dentre muitas outras utilidades!",
+    "brand": {
+      "@type": "Brand",
+      "name": "Rafisa"
+    },
+    "material": "Polipropileno - Ráfia",
+    "url": "https://rafisa.com.br/produto/convencional"
+  }
+
   const closeNotifyHandler = (e) => {
     const input = e.target;
     setTimeout(() => {
@@ -27,7 +41,13 @@ export default function Produto(props) {
       <Head>
         <title>Rafisa - Sacos de ráfia laminados reforçados</title>
         <meta name="description" content="Sacaria de ráfia com revestimento extra para armazenamento de materiais pontiagudos ou pesados, fornecendo despreocupação com relaçao ao transporte da sua mercadoria!"/>
-        <link rel="canonical" href="https://rafisa.com.br/produto/laminado/"/>
+        <link rel="canonical" href="https://rafisa.com.br/produto/laminado/" />
+        <Script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(sacariaLaminadaStructuredData)
+        }}
+      />
       </Head>
 
       <input name="close" id="close" type="radio"></input>

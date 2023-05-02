@@ -20,10 +20,12 @@ export default function WhatsAppButton(props) {
 
         <div className="wpp">
         <h2>Fale conosco!</h2>
-        <Link href="https://api.whatsapp.com/send?phone=5547991908897&text=Oi,%20eu%20gostaria%20de%20saber%20mais%20sobre%20a%20Rafisa!">
-          <a target="_blank" onClick={() => {eventHandler("Botão", "Botão do whatsapp (card)")}}>
-            <img className="whatsimg" src={WhatsImg} />
-          </a>
+        <Link
+          href="https://api.whatsapp.com/send?phone=5547991908897&text=Oi,%20eu%20gostaria%20de%20saber%20mais%20sobre%20a%20Rafisa!"
+          target="_blank"
+          onClick={() => {eventHandler("Botão", "Botão do whatsapp (card)")}}
+        >
+          <img className="whatsimg" src={WhatsImg} />
         </Link>
         <p>Horário de atendimento: das 08:00 às 18:00</p>
         </div>
