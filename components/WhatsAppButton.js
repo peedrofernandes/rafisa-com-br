@@ -14,7 +14,7 @@ export default function WhatsAppButton(props) {
       <div className="wpp-container">
         <div>
           <label htmlFor="close">
-            <img className="cancel" src={CancelIcon} />
+            <img className="cancel" src={CancelIcon} alt="Pequeno ícone com um X indicando fechamento da janela"/>
           </label>
         </div>
 
@@ -25,7 +25,7 @@ export default function WhatsAppButton(props) {
           target="_blank"
           onClick={() => {eventHandler("Botão", "Botão do whatsapp (card)")}}
         >
-          <img className="whatsimg" src={WhatsImg} />
+          <img className="whatsimg" src={WhatsImg} alt="Imagem pequena com a logo do WhatsApp em verde" />
         </Link>
         <p>Horário de atendimento: das 08:00 às 18:00</p>
         </div>

@@ -27,7 +27,7 @@ export default function Info(props) {
           <div className="right">
 
             <div className="vitra-banner">
-              <img src={VitraBanner} alt="Máquina Vitra" />
+              <img src={VitraBanner} alt="Imagem mostrando a Máquina de corte e costura automática da marca Vitra" />
             </div>
 
           </div>

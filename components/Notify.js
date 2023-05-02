@@ -15,7 +15,7 @@ export default function Notify() {
     <Toast>
       <div className="close">
         <label htmlFor="close2">
-          <img id="close-btn" src={CancelIcon} />
+          <img id="close-btn" src={CancelIcon} alt="Pequeno ícone com um X indicando fechamento da janela" />
         </label>
       </div>
 

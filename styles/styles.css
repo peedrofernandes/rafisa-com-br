@@ -618,7 +618,7 @@ footer {
   flex-direction: column;
   gap: 8px;
 }
-.contact li {
+.contact > li a {
   display: flex;
   gap: 8px;
   align-items: center;
