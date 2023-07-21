@@ -1,7 +1,7 @@
 name: Deploy
 
 on:
-  workflow-dispatch
+  workflow-dispatch:
   push:
     branches:
       - rafisa-old
